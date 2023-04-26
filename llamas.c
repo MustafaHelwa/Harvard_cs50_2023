@@ -16,4 +16,7 @@ int main (void)
     {
         end = get_int ("Ending size: ");
     }
+
+    int years = 0;
+    
 }
