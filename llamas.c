@@ -19,7 +19,7 @@ int main (void)
     while (end < 0);
 
     int years = 0;
-    while (start ==! end)
+    while (start != end)
     {
         start += start / 12;
         years++;
