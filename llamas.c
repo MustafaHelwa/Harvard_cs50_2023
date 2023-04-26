@@ -19,10 +19,21 @@ int main (void)
     while (end < 0);
 
     int years = 0;
-    while (start != end)
+    if (start < end)
     {
-        start += start / 12;
-        years++;
+        while (start < end)
+        {
+            start += start / 12;
+            years++;
+       }
+    }
+    else if (start > end)
+    {
+        while (start > end)
+        {
+            start += start / 12;
+            years++;
+       }
     }
 
     printf ("Years: %i\n", years);
