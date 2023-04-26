@@ -16,24 +16,14 @@ int main (void)
     {
         end = get_int ("Ending size: ");
     }
-    while (end < 0);
+    while (end < start);
 
     int years = 0;
-    if (start < end)
+
+    while (start < end)
     {
-        while (start < end)
-        {
-            start += start / 12;
-            years++;
-       }
-    }
-    else if (start > end)
-    {
-        while (start > end)
-        {
-            start -= start / 12;
-            years++;
-       }
+        start += start / 12;
+        years++;
     }
 
     printf ("Years: %i\n", years);
