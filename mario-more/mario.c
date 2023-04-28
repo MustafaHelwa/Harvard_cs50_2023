@@ -19,7 +19,7 @@ int main(void)
         int row = height;
         do
         {
-            printf(" ");
+            printf(".");
             row--;
         }
         while(row > 1);
