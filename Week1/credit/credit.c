@@ -25,7 +25,18 @@ int main(void)
 
     //storing variables
 
-    int digit_1 = num % (10^1);
+    long i = 10;
+    long second_to_last = 0;
+    long second_to_last_total = 0;
 
-    printf("first: %i\n", digit_1);
+    do
+    {
+    second_to_last = num % (i);
+    second_to_last_total += second_to_last;
+    i *=100;
+
+    printf("Second to last now: %lo. Total: %lo\n", second_to_last, second_to_last_total);
+    }
+    while (i <10000000000000000);
+
 }
