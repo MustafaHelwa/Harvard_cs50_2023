@@ -69,7 +69,7 @@ int main(void)
 
         if( val_num % 20 == 0)
         {
-            printf("VALID Card\n");
+//            printf("VALID Card\n");       uncomment if validation needed
 
             if(counter == 15)
             {
@@ -93,7 +93,7 @@ int main(void)
         }
         else
         {
-            printf("INVALID2\n");
+            printf("INVALID\n");            //change it to INVALID2 to check if it passed the first validation @ Line 19
         }
 
     }
