@@ -16,6 +16,7 @@ int main(void)
     //making first row spaces:
     int row = height;
     int count = height;
+    int counter2 = 1;
 
     do
         {
@@ -25,6 +26,7 @@ int main(void)
             row--;
         }
         while(row > 1);
+        row = height - counter2;
 
         if(count - height < 1)
         {
