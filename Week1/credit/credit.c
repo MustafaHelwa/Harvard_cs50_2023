@@ -73,7 +73,7 @@ int main(void)
 
             if(counter == 15)
             {
-                printf("AMES\n");
+                printf("AMEX\n");
             }
             else if (counter == 13 && dummy_rem == 4)
             {
@@ -88,6 +88,11 @@ int main(void)
                 else if (MasterCheck >= 51 && MasterCheck <= 55)
                 {
                     printf("MASTERCARD\n");
+                }
+                else
+                {
+                    printf("INVALID\n");
+
                 }
             }
         }
