@@ -28,14 +28,16 @@ int main(void)
     long i = 10;
     long second_to_last = 0;
     long second_to_last_total = 0;
-
+    int val =0;
     do
     {
     second_to_last = num % (i);
     second_to_last_total += second_to_last;
-    i *=100;
 
-    printf("Second to last now: %lo. Total: %lo\n", second_to_last, second_to_last_total);
+    i *=10;
+    val = second_to_last - second_to_last_total;
+
+    printf("Second to last now: %lo.\n", second_to_last);
     }
     while (i <10000000000000000);
 
