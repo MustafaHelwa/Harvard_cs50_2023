@@ -97,20 +97,20 @@ int main(void)
                 {
                     printf("MASTERCARD\n");
                 }
+                else
+                {
+                    printf("INVALID\n");
+                }
+
             }
             else
             {
                 printf("INVALID\n");
-
             }
         }
         else
         {
-
             printf("INVALID\n");            //change it to INVALID2 to check if it passed the first validation @ Line 19
         }
-
     }
-
-
 }
