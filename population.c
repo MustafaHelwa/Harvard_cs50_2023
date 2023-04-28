@@ -24,7 +24,7 @@ int main(void)
 
     while (start < end)
     {
-        start += start / 12.00;
+        start += start / 12;
         years++;
     }
 
