@@ -73,21 +73,21 @@ int main(void)
 
             if(counter == 15)
             {
-                printf("American Express\n");
+                printf("AMES\n");
             }
             else if (counter == 13 && dummy_rem == 4)
             {
-                printf("Visa\n");
+                printf("VISA\n");
             }
             else if (counter == 16)
             {
                 if (dummy_rem == 4)
                 {
-                    printf("Visa\n");
+                    printf("VISA\n");
                 }
                 else if (MasterCheck >= 51 && MasterCheck <= 55)
                 {
-                    printf("MasterCard\n");
+                    printf("MASTERCARD\n");
                 }
             }
         }
