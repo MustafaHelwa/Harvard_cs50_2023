@@ -25,19 +25,19 @@ int main(void)
 
     //storing variables
 
-    long i = 10;
+    int i = 10;
     long second_to_last = 0;
     long second_to_last_total = 0;
     int val =0;
     do
     {
-    second_to_last = num % (i);
+    second_to_last = num % i;
     second_to_last_total += second_to_last;
 
-    i *=10;
-    val = second_to_last - second_to_last_total;
+    printf("del: %lo. Second to last now: %lo.\n", i, second_to_last);
 
-    printf("Second to last now: %lo.\n", second_to_last);
+    i = i * 10;
+
     }
     while (i <10000000000000000);
 
