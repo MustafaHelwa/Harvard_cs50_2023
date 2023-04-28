@@ -51,7 +51,7 @@ int main(void)
 
         int val_num = ((rem2 * 2) + rem1) ;
 
-        printf("remvalue: %i\n", val_num); 
+        printf("rem1: %i. rem2: %i. value: %i\n", rem1, rem2, val_num);
 
         if( val_num % 20 == 0)
         {
