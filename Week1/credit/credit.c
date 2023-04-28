@@ -26,20 +26,26 @@ int main(void)
     //storing variables
 
     long i = 10;
-    int second_to_last;
-    int second_to_last_total = 0;
+    int rem1,rem2;
     long new_num = num;
-
+    int counter = 1;
 
     do
     {
-        second_to_last = new_num % i;
-        second_to_last_total += second_to_last;
+        if (counter % 2 == 0)
+        {
+            rem1 = new_num % i;
+        }
+        else
+        {
+            rem2 = new_num % i;
+        }
 
         new_num /= 10;
-        printf("del: %li. Second to last now: %i. new number: %li\n", i, second_to_last, new_num);
-
+        counter++;
+        printf("Rem1: %i. Rem2: %i. New Number: %li\n", rem1,rem2, new_num);
     }
     while(new_num > 0);
+
 
 }
