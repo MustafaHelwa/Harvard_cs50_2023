@@ -28,7 +28,7 @@ int main(void)
     long i = 10;
     int rem1=0, rem2 = 0;
     long new_num = num;
-    int counter = 1;
+    int counter = 0;
 
     do
     {
