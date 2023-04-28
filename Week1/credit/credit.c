@@ -106,7 +106,7 @@ int main(void)
                     printf("INVALID\n");
                 }
 //Other will be invalid
-            }cub
+            }
             else
             {
                 printf("INVALID\n");
