@@ -30,16 +30,16 @@ int main(void)
     int second_to_last_total = 0;
     long new_num = num;
 
+
     do
     {
         second_to_last = new_num % i;
         second_to_last_total += second_to_last;
-        new_num -= second_to_last;
 
+        new_num /= 10;
         printf("del: %li. Second to last now: %i. new number: %li\n", i, second_to_last, new_num);
 
     }
     while(new_num > 0);
-
 
 }
