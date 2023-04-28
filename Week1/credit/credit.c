@@ -25,7 +25,7 @@ int main(void)
 
     //storing variables
 
-    int digit_1 = num % 10;
+    int digit_1 = num % (10^1);
 
     printf("first: %i\n", digit_1);
 }
