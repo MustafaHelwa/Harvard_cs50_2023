@@ -35,20 +35,21 @@ int main(void)
         {
             if (counter % 2 == 0)
             {
-                rem1 += new_num % i;
+                int dummy_rem = new_num % i;
+                if(dummy_rem > 10)
+                {
+                    rem1 += ((dummy_rem % 10)*2) + 1;
+                }
+                else
+                {
+                    rem1 += ((new_num % i)*2) ;
+                }
+
 
             }
             else
             {
-                int dummy_rem = new_num % i;
-                if(dummy_rem > 10)
-                {
-                    rem2 += ((dummy_rem % 10)*2) + 1;
-                }
-                else
-                {
-                    rem2 += ((new_num % i)*2) ;
-                }
+                rem2 += new_num % i;
             }
 
             new_num /= 10;
