@@ -11,7 +11,7 @@ int main(void)
     {
         num = get_long("Number: ");
     }
-    while(num < 1);
+    while (num < 1);
 
     //invalid card if less than 13 digit
     if (num < (1000000000000))
@@ -19,7 +19,7 @@ int main(void)
         printf("INVALID\n");
     }
     else
-        {
+    {
 
 
         ///////////////////// implementing Luhn’s algorithm //////////////////////////
@@ -27,7 +27,7 @@ int main(void)
         //storing variables
 
         long i = 10;
-        int rem1=0, rem2 = 0;
+        int rem1 = 0, rem2 = 0;
         long new_num = num;
         int counter = 0;
         int dummy_rem;
@@ -45,9 +45,9 @@ int main(void)
             }
             else
             {
-                if(dummy_rem >4)
+                if (dummy_rem > 4)
                 {
-                    rem2 += (dummy_rem*2 % 10) + 1;
+                    rem2 += (dummy_rem * 2 % 10) + 1;
                 }
                 else
                 {
@@ -61,19 +61,19 @@ int main(void)
                 MasterCheck = new_num;
             }
         }
-        while(new_num > 0);
+        while (new_num > 0);
 
 
         ///////////////////// Card validity //////////////////////////
         int val_num = (rem1 + rem2) ;
-
-        if( val_num % 10 == 0)
+        if (val_num % 10 == 0)
         {
 //            printf("VALID Card\n");       uncomment if validation needed
 
-            if(counter == 15)
+//AEMX rules
+            if (counter == 15)
             {
-                if(MasterCheck == 34 || MasterCheck ==37)
+                if (MasterCheck == 34 || MasterCheck == 37)
                 {
                     printf("AMEX\n");
                 }
@@ -83,10 +83,14 @@ int main(void)
                 }
 
             }
+
+//VISA rules
             else if (counter == 13 && dummy_rem == 4)
             {
                 printf("VISA\n");
             }
+
+//VISA and MASTERCARD rules
             else if (counter == 16)
             {
                 if (dummy_rem == 4)
@@ -101,7 +105,7 @@ int main(void)
                 {
                     printf("INVALID\n");
                 }
-
+//Other will be invalid
             }
             else
             {
