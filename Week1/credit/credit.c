@@ -18,43 +18,50 @@ int main(void)
     {
         printf("INVALID\n");
     }
-
-
-
-    /////////////////////implementing Luhn’s algorithm//////////////////////////
-
-    //storing variables
-
-    long i = 10;
-    int rem1=0, rem2 = 0;
-    long new_num = num;
-    int counter = 0;
-
-    do
-    {
-        int counter_val = counter %2;
-        if (counter % 2 == 0)
+    else
         {
 
-            rem1 += new_num % i;
+
+        /////////////////////implementing Luhn’s algorithm//////////////////////////
+
+        //storing variables
+
+        long i = 10;
+        int rem1=0, rem2 = 0;
+        long new_num = num;
+        int counter = 0;
+
+        do
+        {
+            int counter_val = counter %2;
+            if (counter % 2 == 0)
+            {
+
+                rem1 += new_num % i;
+            }
+            else
+            {
+                rem2 += new_num % i;
+            }
+
+            new_num /= 10;
+            counter++;
+        }
+        while(new_num > 0);
+
+        int val_num = ((rem2 * 2) + rem1) ;
+
+        printf("remvalue: %i\n", val_num); 
+
+        if( val_num % 20 == 0)
+        {
+            printf("VALID Card\n");
         }
         else
         {
-            rem2 += new_num % i;
+            printf("INVALID2\n");
         }
 
-        new_num /= 10;
-        counter++;
     }
-    while(new_num > 0);
-
-    int val_num = (rem2 * 2) + rem1;
-
-    if( val_num % 20 ==0)
-    {
-
-        if(cunter == )
-    }
-
 
 }
