@@ -13,16 +13,15 @@ int main(void)
     while(height < 1 || height > 8);
 
 
-
+    //making first row spaces:
     int row = height;
     do
     {
         printf(".");
         row--;
     }
-    while(row > 0);
+    while(row > 1);
 
-    //Writing hash loop
     for(int i = 1; i <= height; i++)
     {
 
