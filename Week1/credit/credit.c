@@ -30,11 +30,12 @@ int main(void)
         int rem1=0, rem2 = 0;
         long new_num = num;
         int counter = 0;
-        int dummy_
+        int dummy_rem;
+        int MasterCheck;
 
         do
         {
-            int dummy_rem = new_num % i;
+            dummy_rem = new_num % i;
 
             if (counter % 2 == 0)
             {
@@ -55,6 +56,10 @@ int main(void)
             }
             new_num /= 10;
             counter++;
+            if (new_num > 10 && new_num < 99)
+            {
+                MasterCheck = new_num;
+            }
         }
         while(new_num > 0);
 
@@ -68,15 +73,22 @@ int main(void)
 
             if(counter == 15)
             {
-                printf("American Express");
+                printf("American Express\n");
             }
-            else if (counter == 13 && )
+            else if (counter == 13 && dummy_rem == 4)
             {
-                printf("Visa");
+                printf("Visa\n");
             }
             else if (counter == 16)
             {
-
+                if (dummy_rem == 4)
+                {
+                    printf("Visa\n");
+                }
+                else if (MasterCheck >= 51 && MasterCheck <= 55)
+                {
+                    printf("MasterCard\n");
+                }
             }
         }
         else
