@@ -17,22 +17,22 @@ int main(void)
 
 
     int row = 1;
-
+    int counter;
     do
         {
-        for (int counter = height - row; counter > 0; counter--)
+        for (counter = height - row; counter > 0; counter--)
         {
             printf(".");
         }
 
-        for (int counter = row; counter > 0; counter--)
+        for (counter = row; counter > 0; counter--)
         {
             printf("#");
         }
 
         printf("  ");
 
-        for (int counter = row; counter > 0; counter--)
+        for (counter = row; counter > 0; counter--)
         {
             printf("#");
         }
@@ -41,6 +41,6 @@ int main(void)
 
         row++;
     }
-    while(row < height);
+    while(row < height+1);
 
 }
