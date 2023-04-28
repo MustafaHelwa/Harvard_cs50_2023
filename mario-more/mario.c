@@ -21,6 +21,8 @@ int main(void)
         row--;
     }
     while(row > 1);
+    printf("#  # \n");
+    
 
     for(int i = 1; i <= height; i++)
     {
@@ -28,7 +30,7 @@ int main(void)
 
     }
 
-    printf("#  # \n");
+
 
 
 }
