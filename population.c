@@ -7,7 +7,7 @@ int main(void)
     int start;
     do
     {
-        start = get_int ("Starting size: ");
+        start = get_int("Starting size: ");
     }
     while (start < 9);
 
@@ -15,7 +15,7 @@ int main(void)
     int end;
     do
     {
-        end = get_int ("Ending size: ");
+        end = get_int("Ending size: ");
     }
     while (end < start);
 
@@ -24,10 +24,10 @@ int main(void)
 
     while (start < end)
     {
-        start = start + (start / 3)-(start / 4);
+        start = start + (start / 3) - (start / 4);
         years++;
     }
 
     // TODO: Print number of years
-    printf ("Years: %i\n", years);
+    printf("Years: %i\n", years);
 }
