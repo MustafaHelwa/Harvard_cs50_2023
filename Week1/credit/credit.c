@@ -67,7 +67,7 @@ int main(void)
         ///////////////////// Card validity //////////////////////////
         int val_num = (rem1 + rem2) ;
 
-        if( val_num % 20 == 0)
+        if( val_num % 10 == 0)
         {
 //            printf("VALID Card\n");       uncomment if validation needed
 
@@ -91,7 +91,7 @@ int main(void)
                 }
                 else
                 {
-                    printf("INVALID2\n");
+                    printf("INVALID\n");
 
                 }
             }
@@ -99,7 +99,7 @@ int main(void)
         else
         {
 
-            printf("val_num: %i. INVALID3\n", val_num);            //change it to INVALID2 to check if it passed the first validation @ Line 19
+            printf("INVALID\n");            //change it to INVALID2 to check if it passed the first validation @ Line 19
         }
 
     }
