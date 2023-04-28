@@ -33,18 +33,11 @@ int main(void)
 
         do
         {
+            int dummy_rem = new_num % i;
+
             if (counter % 2 == 0)
             {
-                int dummy_rem = new_num % i;
-                printf("dummyRem: %i ",dummy_rem);
-                if(dummy_rem >= 5)
-                {
-                    rem1 += ((dummy_rem % 10)*2) + 1;
-                }
-                else
-                {
-                    rem1 += (dummy_rem*2) ;
-                }
+                rem1 += (dummy_rem*2) ;
 
 
             }
@@ -55,7 +48,7 @@ int main(void)
 
             new_num /= 10;
             counter++;
-            printf("rem1: %i. rem2: %i. Num: %li\n", rem1, rem2, new_num);
+            printf("dummy: %i. rem1: %i. rem2: %i. Num: %li\n", dummy_rem, rem1, rem2, new_num);
         }
         while(new_num > 10);
 
