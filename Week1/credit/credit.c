@@ -26,7 +26,7 @@ int main(void)
     //storing variables
 
     long i = 10;
-    int rem1,rem2;
+    int rem1,rem2 = 0;
     long new_num = num;
     int counter = 1;
 
@@ -34,11 +34,12 @@ int main(void)
     {
         if (counter % 2 == 0)
         {
-            rem1 = new_num % i;
+            
+            rem1 += new_num % i;
         }
         else
         {
-            rem2 = new_num % i;
+            rem2 += new_num % i;
         }
 
         new_num /= 10;
