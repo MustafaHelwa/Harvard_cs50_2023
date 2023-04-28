@@ -14,12 +14,12 @@ int main(void)
 
 
     //Writing hash loop
-    for(int i = height; i > 1; i--)
+    for(int i = height; i > 2; i--)
     {
         printf(" ");
     }
 
-    printf("# # \n");
+    printf("#  # \n");
 
 
 }
