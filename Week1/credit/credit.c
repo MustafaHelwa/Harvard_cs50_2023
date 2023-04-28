@@ -36,13 +36,14 @@ int main(void)
             if (counter % 2 == 0)
             {
                 int dummy_rem = new_num % i;
-                if(dummy_rem*2 > 10)
+                printf("dummyRem: %i ",dummy_rem);
+                if(dummy_rem >= 5)
                 {
                     rem1 += ((dummy_rem % 10)*2) + 1;
                 }
                 else
                 {
-                    rem1 += ((new_num % i)*2) ;
+                    rem1 += (dummy_rem*2) ;
                 }
 
 
