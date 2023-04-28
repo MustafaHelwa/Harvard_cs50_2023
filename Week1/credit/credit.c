@@ -45,9 +45,16 @@ int main(void)
 
         new_num /= 10;
         counter++;
-        printf("counter: %i. Rem1: %i. Rem2: %i. New Number: %li\n", counter_val, rem1, rem2, new_num);
     }
     while(new_num > 0);
+
+    int val_num = (rem2 * 2) + rem1;
+
+    if( val_num % 20 ==0)
+    {
+
+        if(cunter == )
+    }
 
 
 }
