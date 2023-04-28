@@ -36,7 +36,7 @@ int main(void)
             int counter_val = counter %2;
             if (counter % 2 == 0)
             {
-                
+
                 rem1 += new_num % i;
             }
             else
@@ -46,12 +46,12 @@ int main(void)
 
             new_num /= 10;
             counter++;
+            printf("rem1: %i. rem2: %i. Num: %li\n", rem1, rem2, new_num);
         }
         while(new_num > 0);
 
+/*
         int val_num = ((rem2 * 2) + rem1) ;
-
-        printf("rem1: %i. rem2: %i. value: %i\n", rem1, rem2, val_num);
 
         if( val_num % 20 == 0)
         {
@@ -62,6 +62,7 @@ int main(void)
             printf("INVALID2\n");
         }
 
-    }
 
+*/
+    }
 }
