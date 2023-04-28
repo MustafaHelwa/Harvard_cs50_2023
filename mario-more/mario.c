@@ -13,16 +13,19 @@ int main(void)
     while(height < 1 || height > 8);
 
 
+
+    int row = height;
+    do
+    {
+        printf(".");
+        row--;
+    }
+    while(row > 0);
+
     //Writing hash loop
     for(int i = 1; i <= height; i++)
     {
-        int row = height;
-        do
-        {
-            printf(".");
-            row--;
-        }
-        while(row > 1);
+
 
     }
 
