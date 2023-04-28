@@ -22,7 +22,7 @@ int main(void)
         {
 
 
-        /////////////////////implementing Luhn’s algorithm//////////////////////////
+        ///////////////////// implementing Luhn’s algorithm //////////////////////////
 
         //storing variables
 
@@ -30,6 +30,7 @@ int main(void)
         int rem1=0, rem2 = 0;
         long new_num = num;
         int counter = 0;
+        int dummy_
 
         do
         {
@@ -45,34 +46,45 @@ int main(void)
             {
                 if(dummy_rem >4)
                 {
-                    rem2 += ((dummy_rem % 10)*2) + 1;
+                    rem2 += (dummy_rem*2 % 10) + 1;
                 }
                 else
                 {
-                    rem2 += (dummy_rem) ;
+                    rem2 += dummy_rem * 2;
                 }
-
             }
-
             new_num /= 10;
             counter++;
-            printf("dummy: %i. rem1: %i. rem2: %i. Num: %li\n", dummy_rem, rem1, rem2, new_num);
         }
         while(new_num > 0);
 
-/*
-        int val_num = ((rem2 * 2) + rem1) ;
+
+        ///////////////////// Card validity //////////////////////////
+        int val_num = (rem1 + rem2) ;
 
         if( val_num % 20 == 0)
         {
             printf("VALID Card\n");
+
+            if(counter == 15)
+            {
+                printf("American Express");
+            }
+            else if (counter == 13 && )
+            {
+                printf("Visa");
+            }
+            else if (counter == 16)
+            {
+
+            }
         }
         else
         {
             printf("INVALID2\n");
         }
 
-
-*/
     }
+
+
 }
