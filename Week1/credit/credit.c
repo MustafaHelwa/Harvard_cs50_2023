@@ -50,7 +50,7 @@ int main(void)
             counter++;
             printf("dummy: %i. rem1: %i. rem2: %i. Num: %li\n", dummy_rem, rem1, rem2, new_num);
         }
-        while(new_num > 10);
+        while(new_num > 0);
 
 /*
         int val_num = ((rem2 * 2) + rem1) ;
