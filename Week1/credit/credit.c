@@ -3,10 +3,29 @@
 
 int main(void)
 {
+    //assigning card variable
+    long num;
+
+    //getting card number
     do
     {
-        long num = get_long("Number: \n");
+        num = get_long("Number: ");
     }
-    while(num < 0);
+    while(num < 1);
 
+    //invalid card if less than 13 digit
+    if (num < (1000000000000))
+    {
+        printf("INVALID\n");
+    }
+
+
+
+    /////////////////////implementing Luhn’s algorithm//////////////////////////
+
+    //storing variables
+
+    int digit_1 = num % 10;
+
+    printf("first: %i\n", digit_1);
 }
