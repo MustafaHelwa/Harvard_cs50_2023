@@ -26,15 +26,16 @@ int main(void)
     //storing variables
 
     long i = 10;
-    int rem1,rem2 = 0;
+    int rem1=0, rem2 = 0;
     long new_num = num;
     int counter = 1;
 
     do
     {
+        int counter_val = counter %2;
         if (counter % 2 == 0)
         {
-            
+
             rem1 += new_num % i;
         }
         else
@@ -44,7 +45,7 @@ int main(void)
 
         new_num /= 10;
         counter++;
-        printf("Rem1: %i. Rem2: %i. New Number: %li\n", rem1,rem2, new_num);
+        printf("counter: %i. Rem1: %i. Rem2: %i. New Number: %li\n", counter_val, rem1, rem2, new_num);
     }
     while(new_num > 0);
 
