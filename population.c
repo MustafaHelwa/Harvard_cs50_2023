@@ -4,18 +4,18 @@
 int main(void)
 {
     // TODO: Prompt for start size
-    float start;
+    int start;
     do
     {
-        start = get_float ("Starting size: ");
+        start = get_int ("Starting size: ");
     }
     while (start < 9);
 
     // TODO: Prompt for end size
-    float end;
+    int end;
     do
     {
-        end = get_float ("Ending size: ");
+        end = get_int ("Ending size: ");
     }
     while (end < start);
 
@@ -24,7 +24,7 @@ int main(void)
 
     while (start < end)
     {
-        start += start / 12;
+        start = start + (start / 3)-(start / 4);
         years++;
     }
 
