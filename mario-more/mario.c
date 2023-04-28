@@ -14,9 +14,16 @@ int main(void)
 
 
     //Writing hash loop
-    for(int i = height; i > 2; i--)
+    for(int i = 1; i <= height; i++)
     {
-        printf(" ");
+        int row = height;
+        do
+        {
+            printf(" ");
+            row--;
+        }
+        while(row > 1);
+
     }
 
     printf("#  # \n");
