@@ -36,7 +36,7 @@ int main(void)
             if (counter % 2 == 0)
             {
                 int dummy_rem = new_num % i;
-                if(dummy_rem > 10)
+                if(dummy_rem*2 > 10)
                 {
                     rem1 += ((dummy_rem % 10)*2) + 1;
                 }
