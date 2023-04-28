@@ -91,14 +91,15 @@ int main(void)
                 }
                 else
                 {
-                    printf("INVALID\n");
+                    printf("INVALID2\n");
 
                 }
             }
         }
         else
         {
-            printf("INVALID\n");            //change it to INVALID2 to check if it passed the first validation @ Line 19
+
+            printf("val_num: %i. INVALID3\n", val_num);            //change it to INVALID2 to check if it passed the first validation @ Line 19
         }
 
     }
