@@ -33,7 +33,6 @@ int main(void)
 
         do
         {
-            int counter_val = counter %2;
             if (counter % 2 == 0)
             {
                 rem1 += new_num % i;
