@@ -15,32 +15,36 @@ int main(void)
 
     //making first row spaces:
     int row = height;
-    int count = 0;
+    int count = height;
 
     do
-    {
-        printf(".");
-        row--;
+        {
+        do
+        {
+            printf(".");
+            row--;
+        }
+        while(row > 1);
+
+        if(count - height < 1)
+        {
+            for(int i = count; i < height; i-- )
+            printf("#");
+        }
+
+        printf("#  #");
+
+        if(count - height < 1)
+        {
+            for(int i = count; i < height; i-- )
+            printf("#");
+        }
+
+        printf("\n");
+        count++;
+
     }
-    while(row > 1);
-
-    if(count < height)
-    {
-        for(int i = count-1; i < height; i++ )
-        printf("#");
-    }
-
-    for(int i = 1; i <= height; i++)
-    {
-
-
-    }
-    printf("  # \n");
-
-
-
-
-
+    while (count < height);
 
 
 }
