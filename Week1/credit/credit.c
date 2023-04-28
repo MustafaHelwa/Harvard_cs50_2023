@@ -71,7 +71,7 @@ int main(void)
         {
 //            printf("VALID Card\n");       uncomment if validation needed
 
-            if(counter == 15)
+            if(counter == 15 && (MasterCheck == 34 || MasterCheck ==37))
             {
                 printf("AMEX\n");
             }
