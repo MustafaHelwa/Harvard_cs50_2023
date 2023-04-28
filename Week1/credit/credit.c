@@ -37,13 +37,21 @@ int main(void)
 
             if (counter % 2 == 0)
             {
-                rem1 += (dummy_rem*2) ;
+                rem1 += (dummy_rem) ;
 
 
             }
             else
             {
-                rem2 += new_num % i;
+                if(dummy_rem >4)
+                {
+                    rem2 += ((dummy_rem % 10)*2) + 1;
+                }
+                else
+                {
+                    rem2 += (dummy_rem) ;
+                }
+
             }
 
             new_num /= 10;
