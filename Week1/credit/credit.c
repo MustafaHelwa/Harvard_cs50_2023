@@ -25,14 +25,21 @@ int main(void)
 
     //storing variables
 
-    int i = 1000000000000000;
-    int second_to_last = 0;
-    long second_to_last_total = 0;
-    int val =0;
+    long i = 10;
+    int second_to_last;
+    int second_to_last_total = 0;
+    long new_num = num;
 
-    second_to_last = num % i;
+    do
+    {
+        second_to_last = new_num % i;
+        second_to_last_total += second_to_last;
+        new_num -= second_to_last;
 
-    printf("del: %lo. Second to last now: %i.\n", i, second_to_last);
+        printf("del: %li. Second to last now: %i. new number: %li\n", i, second_to_last, new_num);
+
+    }
+    while(new_num > 0);
 
 
 }
