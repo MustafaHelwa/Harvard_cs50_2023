@@ -22,7 +22,7 @@ int main(void)
         {
         for (counter = height - row; counter > 0; counter--)
         {
-            printf(".");
+            printf(" ");
         }
 
         for (counter = row; counter > 0; counter--)
