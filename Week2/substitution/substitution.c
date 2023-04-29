@@ -70,6 +70,7 @@ string processedtext (string tobedonetext)
     {
         if (((char)tobedonetext[i] > 96 && (char)key[i] > 96) || ((char)tobedonetext[i] < 96 && (char)key[i] < 96))
         {
+            if 
             tobedonetext[i] = key[i];
         }
     }
