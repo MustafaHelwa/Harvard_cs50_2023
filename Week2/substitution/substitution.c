@@ -92,12 +92,12 @@ string processedtext (string tobedonetext)
         if (islower(tester) != 0)                           //small will be - 97 since a is 97 and it will be 0 in key array
         {
             int place = (int) tobedonetext[i] - 97;
-            tobedonetext[i] =  tolower(key [place]);        //tolower() will make sure that it is lower
+            tobedonetext[i] =  tolower(argv [place]);        //tolower() will make sure that it is lower
         }
         else if (isupper(tester) != 0)                      //repeated with upper case instead of lower
         {
             int place = (int) tobedonetext[i] - 65;
-            tobedonetext[i] =  toupper(key [place]);
+            tobedonetext[i] =  toupper(argv [place]);
         }
         else if (isalpha(tester) == 0)                      //if it is neither upper nor lower it shouldn't be an alphabit char
         {
