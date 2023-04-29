@@ -16,5 +16,8 @@ int main(int argc, string argv[])
         printf(" %s \n", argv[i]);
     }
 
-    printf(" %s \n", leet);
+    for (int i = 0; i < argc; i++)
+    {
+        printf(" %s \n", leet[i]);
+    }
 }
