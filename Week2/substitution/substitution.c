@@ -68,7 +68,9 @@ string processedtext (string tobedonetext)
 
     for (int i = 0; i < strlen(tobedonetext); i++)
     {
-        if (islower((char) tobedonetext[i]) != 1)
+        int tester = (int) tobedonetext[i];
+
+        if (islower(tester) == 1)
         {
             int place = (int) tobedonetext[i] - 97;
             tobedonetext[i] =  key [place];
