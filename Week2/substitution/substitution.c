@@ -6,7 +6,7 @@
 bool keyChecker1 (string keyvalue, int keylength);
 string processedtext (string tobedonetext);
 
-string key;                                     //global variable since it will be used in all below functions
+const string key;                                     //global variable since it will be used in all below functions
 
 //##########################################################################//
 //##################         Main code functions          ##################//
@@ -28,7 +28,6 @@ int main (int argc, string argv[])
         printf("ciphertext: %s\n", ciphertext);
 
     }
-
 }
 
 
@@ -66,7 +65,7 @@ bool keyChecker1 (string keyvalue, int keylength)
             }
         }
     }
-    return 1;
+    return 0;
 }
 
 //##########################################################################//
