@@ -8,9 +8,13 @@
 
 int main(int argc, string argv[])
 {
+    string leet[argc];
+
     for (int i = 0; i < argc; i++)
     {
-        
+        leet[i] = argv[i];
+        printf(" %s \n", argc[]);
     }
 
+    printf(" %s \n", argc[]);
 }
