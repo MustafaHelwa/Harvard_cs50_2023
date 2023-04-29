@@ -13,12 +13,14 @@ string key;                                     //global variable since it will 
 //##########################################################################//
 int main (int argc, string argv[])
 {
+
     key = argv[1];
     bool check1 = keyChecker1 (key, strlen(key));
 
     if (check1 == 1)
     {
 // empty to stop the code if the key is not acceptable
+    return 1;
     }
     else
     {
