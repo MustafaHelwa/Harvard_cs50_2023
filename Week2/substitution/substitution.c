@@ -25,7 +25,7 @@ bool keyChecker1 (string keyvalue, int keylength)
     }
     else
     {
-        for (int i =0; i < keylength; i++)
+        for (int i = 0; i < keylength; i++)
         {
             char keyentry = (char) keyvalue[i];
             if (keyentry < 65 || keyentry > 123 || (keyentry > 90 && keyentry < 97))
@@ -33,9 +33,16 @@ bool keyChecker1 (string keyvalue, int keylength)
                 printf ("Key must only contain alphabetic characters.\n");
                 return 1;
             }
-            else if 
+            else
             {
-
+                for (int j = 0; j < keylength; j++)
+                {
+                    if(keylentry = (char) keyvalue[j])
+                    {
+                        printf ("Key must not ccontain repeated characters.\n");
+                        return 1;
+                    }
+                }
             }
         }
 
