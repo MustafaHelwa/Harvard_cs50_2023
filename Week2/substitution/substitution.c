@@ -13,7 +13,7 @@ string key;                                     //global variable since it will 
 //##########################################################################//
 int main (int argc, string argv[])
 {
-    if (argv[2][3] == '.')
+    if (argc == 3 || argc == 1)
     {
         printf("Usage: ./substitution key");
     }
