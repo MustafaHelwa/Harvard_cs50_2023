@@ -6,8 +6,6 @@
 #include <cs50.h>
 #include <stdio.h>
 
-string replacew (string x);
-
 
 int main(int argc, string argv[])
 {
@@ -15,29 +13,40 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < argc; i++)
     {
-    leet[i] = replacew ((string) argv[i]);
+        leet[i] = argv[i];
+
+        char x = (char) leet[2][i];
+        switch (x)
+        {
+            case 'a':
+                printf("4");
+                break;
+
+            case 'e':
+                printf("3");
+                break;
+
+            case 'o':
+                printf("0");
+                break;
+
+            case 'u':
+                printf("v");
+                break;
+
+            case 'i':
+                printf("!");
+                break;
+
+            default:
+                printf("%s \n", leet[i]);
+                break;
+        }
+
     }
 
     for (int i = 0; i < argc; i++)
     {
         printf(" %s \n", leet[i]);
     }
-}
-
-
-string replacew (string x[])
-{
-    switch (x)
-    {
-        case 'a':
-            printf("4");
-            break;
-        case 'b':
-            printf("8");
-            break;
-        default:
-            print("%s", x);
-            break;
-    }
-    return x;
 }
