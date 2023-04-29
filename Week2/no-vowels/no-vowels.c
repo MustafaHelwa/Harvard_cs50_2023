@@ -13,7 +13,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < argc; i++)
     {
-        leet[i] = argv[i];
+        leet[0][i] = argv[2][i];
 
         char x = (char) leet[2][i];
         switch (x)
