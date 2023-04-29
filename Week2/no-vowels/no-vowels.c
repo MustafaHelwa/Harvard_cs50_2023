@@ -6,7 +6,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-char replacew (char x);
+string replacew (string x);
 
 
 int main(int argc, string argv[])
@@ -15,7 +15,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < argc; i++)
     {
-    leet[i] = replacew ((char) argv[i]);
+    leet[i] = replacew ((string) argv[i]);
     }
 
     for (int i = 0; i < argc; i++)
@@ -25,7 +25,7 @@ int main(int argc, string argv[])
 }
 
 
-char replacew (char x[])
+string replacew (string x[])
 {
     switch (x)
     {
