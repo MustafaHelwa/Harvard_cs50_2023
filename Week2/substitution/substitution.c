@@ -2,12 +2,11 @@
 #include <string.h>
 #include <stdio.h>
 
-string keyChecker1 (string key);
+string keyChecker1 (string xkey);
 
 
 int main (int argc, string argv[])
 {
-    key = key[argc]
     string check1 = keyChecker1 (argv);
     printf("%s \n", check1);
 
