@@ -67,23 +67,24 @@ string processedtext (string tobedonetext)
 {
     for (int i = 0; i < strlen(tobedonetext); i++)
     {
-        if (isalpha(tobedonetext[i]) == 1)
+        char charchecker = tobedonetext[i];
+
+        if (isalpha(charchecker) == 1)
         {
-            if (islower(tobedonetext[i]) == 1)
+            if (islower(charchecker) == 1)
             {
                 int place = (int) tobedonetext[i] - 97;
                 tobedonetext[i] =  key [place];
                 printf("int: %i. char %c", place, tobedonetext[i]);
             }
-            else if (isupper(tobedonetext[i]) !=0)
+            else
             {
                 tobedonetext[i] = toupper(key[(int) tobedonetext[i] - 65]);
             }
-            else
-            {
-                tobedonetext[i] = tobedonetext[i];
-            }
-
+        }
+        else
+        {
+            tobedonetext[i] = tobedonetext[i];
         }
     }
     return tobedonetext;
