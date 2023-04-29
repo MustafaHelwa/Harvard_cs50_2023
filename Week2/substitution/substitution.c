@@ -5,10 +5,11 @@
 bool keyChecker1 (string keyvalue, int keylength);
 string processedtext (string tobedonetext);
 
+string key;
 
 int main (int argc, string argv[])
 {
-    string key = argv[1];
+    key = argv[1];
     bool check1 = keyChecker1 (key, strlen(key));
 
     if (check1 == 1)
@@ -65,8 +66,10 @@ string processedtext (string tobedonetext)
 
     for (int i = 0; i < strlen(tobedonetext); i++)
     {
-        
-        tobedonetext[i] = key[i];
+        if (((char)tobedonetext[i] > 96 && (char)key[i] > 96) || ((char)tobedonetext[i] < 96 && (char)key[i] < 96))
+        {
+            tobedonetext[i] = key[i];
+        }
     }
     return tobedonetext;
 }
