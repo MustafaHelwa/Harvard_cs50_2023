@@ -6,7 +6,7 @@
 bool keyChecker1 (string keyvalue, int keylength);
 string processedtext (string tobedonetext);
 
-const string key;                                     //global variable since it will be used in all below functions
+string key;                                     //global variable since it will be used in all below functions
 
 //##########################################################################//
 //##################         Main code functions          ##################//
