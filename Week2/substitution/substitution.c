@@ -2,20 +2,27 @@
 #include <string.h>
 #include <stdio.h>
 
-string keyChecker (string xVal[]);
+int keyChecker1 (int keylength);
+
 
 int main (int argc, string argv[])
 {
-    string key;
-    key = keyChecker (argv[]);
+    int check1 = keyChecker1 (argc);
+    printf("%i \n", check1);
+
 }
 
-string keyChecker (string xVal[])
+//26 letter checker
+
+int keyChecker1 (keylength)
 {
-    if (strlen(sxVal[]) < 26)
+    if (keylength != 26)
     {
-        printf("Key must contain 26 characters.");
+        printf("Key must contain 26 characters.\n");
         return 1;
     }
-
+    else
+    {
+        return 0;
+    }
 }
