@@ -48,7 +48,7 @@ int compute_score(string word)
         {
             n = (int) word[i];
         }
-        if (islower(n))
+        else if (islower(n))
         {
             n = (int) word[i] - 32;
         }
