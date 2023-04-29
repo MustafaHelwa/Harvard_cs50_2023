@@ -46,11 +46,11 @@ int compute_score(string word)
 
         if (isupper(n))
         {
-            n = (char) word[i];
+            n = (int) word[i];
         }
         if (islower(n))
         {
-            n = (char) word[i] - 32;
+            n = (int) word[i] - 32;
         }
         else
         {
