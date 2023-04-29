@@ -13,20 +13,27 @@ string key;                                     //global variable since it will 
 //##########################################################################//
 int main (int argc, string argv[])
 {
-    key = argv[26];
-    bool check1 = keyChecker1 (key, strlen(key));
-
-    if (check1 == 1)
+    if (argv[0] == [])
     {
-// empty to stop the code if the key is not acceptable
+        printf("Usage: ./substitution key\n");
     }
     else
     {
-        string plaintext = get_string ("plaintext: ");
-        string ciphertext = processedtext (plaintext);
+        key = argv[26];
+        bool check1 = keyChecker1 (key, strlen(key));
 
-        printf("ciphertext: %s\n", ciphertext);
+        if (check1 == 1)
+        {
+// empty to stop the code if the key is not acceptable
+        }
+        else
+        {
+            string plaintext = get_string ("plaintext: ");
+            string ciphertext = processedtext (plaintext);
 
+            printf("ciphertext: %s\n", ciphertext);
+
+        }
     }
 }
 
