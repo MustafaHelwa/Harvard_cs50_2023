@@ -8,5 +8,6 @@
 
 int main(int argc, string argv[])
 {
-    
+    for ()
+    printf()
 }
