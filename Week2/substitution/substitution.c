@@ -23,9 +23,14 @@ bool keyChecker1 (string keyvalue, int keylength)
         printf ("Key must contain 26 characters. %i\n", keylength);
         return 1;
     }
-    else if
+    else
     {
-
+        for (int i =0; i < keylength; i++)
+        {
+            char keyentry = (char) keyvalue[i];
+            if (keyentry )
+        }
+        printf ("Key must only contain alphabetic characters.\n");
         return 1;
     }
 }
