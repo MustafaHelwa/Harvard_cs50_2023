@@ -68,20 +68,18 @@ string processedtext (string tobedonetext)
 
     for (int i = 0; i < strlen(tobedonetext); i++)
     {
-         char charchecker = tobedonetext[i];
-
-        if (islower(charchecker) != 1)
+        if (islower((char) tobedonetext[i]) != 1)
         {
             int place = (int) tobedonetext[i] - 97;
             tobedonetext[i] =  key [place];
         }
         else
         {
-            int place = (int) tobedonetext[i] - 65;
-            printf("check");
-            tobedonetext[i] =  key [place];
+            printf("failed1\n");
         }
+        printf("failed2\n");
     }
+    printf("Failed3\n");
 
     return tobedonetext;
 }
