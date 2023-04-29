@@ -57,7 +57,8 @@ int compute_score(string word)
             n = 0;
         }
 
-    //checking line:        printf("N value: %c\n", n);                     //Use %i to check char value ... A is 65
+    //checking line:
+            printf("N value: %c\n", n);                     //Use %i to check char value ... A is 65
 
     // TODO: Counting score based on POINTS array
         if (n != 0)
