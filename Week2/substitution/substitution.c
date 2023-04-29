@@ -28,7 +28,7 @@ bool keyChecker1 (string keyvalue, int keylength)
         for (int i =0; i < keylength; i++)
         {
             char keyentry = (char) keyvalue[i];
-            if (keyentry )
+            if (keyentry < 65 || keyentry > 123)
         }
         printf ("Key must only contain alphabetic characters.\n");
         return 1;
