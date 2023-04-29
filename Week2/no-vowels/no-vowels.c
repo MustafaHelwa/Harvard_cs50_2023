@@ -12,23 +12,26 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < argc; i++)
     {
-        leet[i] = argv[i];
+        leet[2][i] = argv[2][i];
     }
 
 
     for (int i = 0; i < argc; i++)
     {
-
-        switch( leet[i])
+        switch( leet[2][i])
         {
-            case 'a' || 'A':
-                leet[i] = 4;
+            case 'a':
+                printf("4");
+                break;
 
-            case 'b' || 'B':
-                leet[i] = 8;
+            case 'b':
+                printf("8");
+                break;
 
             default:
+                printf("\ndef\n");
                 break;
+
         }
         printf(" %s \n", argv[i]);
     }
