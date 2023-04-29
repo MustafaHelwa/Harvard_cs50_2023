@@ -65,15 +65,15 @@ bool keyChecker1 (string keyvalue, int keylength)
 
 string processedtext (string tobedonetext)
 {
-    char planetextchar;
-
     for (int i = 0; i < strlen(tobedonetext); i++)
     {
         if (isalpha(tobedonetext[i]) != 0)
         {
             if (islower(tobedonetext[i]) == 1)
             {
-                tobedonetext[i] = tolower(key[(int) tobedonetext[i] - 97]);
+                int place = (int) tobedonetext[i] - 97;
+                tobedonetext[i] =  key [place];
+                printf("int: %i. char %c", place, tobedonetext[i]);
             }
             else if (isupper(tobedonetext[i]) !=0)
             {
