@@ -69,24 +69,21 @@ string processedtext (string tobedonetext)
 
     for (int i = 0; i < strlen(tobedonetext); i++)
     {
-        if (((char)tobedonetext[i] > 96 && (char)key[i] > 96) || ((char)tobedonetext[i] < 96 && (char)key[i] < 96))
+        if (isalpha(tobedonetext[i]) != 0)
         {
-            for (int j = 0; j < strlen(tobedonetext); j++)
+            if (islower(tobedonetext[i]) == 1)
             {
-                char asciival = (char) tobedonetext[j];
-                if (isupper(tobedonetext[j]))
-                {
-                    tobedonetext[j] = toupper(key[asciival - 65]);
-                }
-                else if (islower(tobedonetext[j]))
-                {
-                    tobedonetext[j] = tolower(key[asciival - 97]);
-                }
-                else
-                {
-                    tobedonetext[j] = tobedonetext[j];
-                }
+                tobedonetext[i] = tolower(key[(char) tobedonetext[i] - 97]);
             }
+            else if (isupper(tobedonetext[i]) !=0)
+            {
+                tobedonetext[i] = toupper(key[(char) tobedonetext[i] - 65]);
+            }
+            else
+            {
+                tobedonetext[i] = tobedonetext[i];
+            }
+
         }
     }
     return tobedonetext;
