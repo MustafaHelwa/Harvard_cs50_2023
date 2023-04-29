@@ -77,9 +77,10 @@ string processedtext (string tobedonetext)
                 int place = (int) tobedonetext[i] - 97;
                 tobedonetext[i] =  key [place];
             }
-            else
+            else if (isupper(charchecker) != 1)
             {
-                tobedonetext[i] = toupper(key[(int) tobedonetext[i] - 65]);
+                int place = (int) tobedonetext[i] - 65;
+                tobedonetext[i] =  key [place];
             }
         }
         else
