@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 bool keyChecker1 (string keyvalue, int keylength);
+string processedtext (string tobedonetext);
 
 
 int main (int argc, string argv[])
@@ -16,8 +17,9 @@ int main (int argc, string argv[])
     }
     else
     {
-        string plaintext = get_string("plaintext: \n");
-        string ciphertext = get_string("ciphertext: \n");
+        string plaintext = get_string ("plaintext: \n");
+        string ciphertext = processedtext (plaintext);
+
     }
 }
 
@@ -54,4 +56,17 @@ bool keyChecker1 (string keyvalue, int keylength)
         }
     }
     return 0;
+}
+
+
+string processedtext (string tobedonetext)
+{
+    char planetextchar;
+
+    for (int i = 0; i < strlen(tobedonetext); i++)
+    {
+        
+        tobedonetext[i] = key[i];
+    }
+    return tobedonetext;
 }
