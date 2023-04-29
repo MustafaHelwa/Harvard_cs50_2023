@@ -13,7 +13,7 @@ string key;                                     //global variable since it will 
 //##########################################################################//
 int main (int argc, string argv[])
 {
-    key = argv[1];
+    key = argv[26];
     bool check1 = keyChecker1 (key, strlen(key));
 
     if (check1 == 1)
