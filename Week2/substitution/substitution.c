@@ -10,7 +10,12 @@ int main (int argc, string argv[])
     string key = argv[1];
     bool check1 = keyChecker1 (key, strlen(key));
 
-    printf("%i \n", check1);
+    if (check1 == 1)
+    {
+        break; 
+    }
+    string plaintext = get_string("plaintext: \n");
+    string ciphertext = get_string("ciphertext: \n");
 
 }
 
@@ -37,7 +42,7 @@ bool keyChecker1 (string keyvalue, int keylength)
             {
                 for (int j = 0; j < keylength; j++)
                 {
-                    if(keylentry = (char) keyvalue[j])
+                    if(keyentry == (char) keyvalue[j])
                     {
                         printf ("Key must not ccontain repeated characters.\n");
                         return 1;
@@ -45,7 +50,6 @@ bool keyChecker1 (string keyvalue, int keylength)
                 }
             }
         }
-
     }
     return 0;
 }
