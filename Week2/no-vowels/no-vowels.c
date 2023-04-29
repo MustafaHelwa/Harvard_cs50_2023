@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     for (int i = 0; i <= argc ; i++)
     {
         new_vowel = replace ((char) argv[1][i]);
-        
+        printf(" %i ",i);
     }
 
     printf("\n");
