@@ -70,8 +70,11 @@ string processedtext (string tobedonetext)
     {
         if (((char)tobedonetext[i] > 96 && (char)key[i] > 96) || ((char)tobedonetext[i] < 96 && (char)key[i] < 96))
         {
-            if 
-            tobedonetext[i] = key[i];
+            for (int i = 0; i < strlen(tobedonetext); i++)
+            {
+                char asciival = char tobedonetext[i]
+                tobedonetext[i] = key[]
+            }
         }
     }
     return tobedonetext;
