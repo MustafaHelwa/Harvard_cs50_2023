@@ -73,11 +73,11 @@ string processedtext (string tobedonetext)
         {
             if (islower(tobedonetext[i]) == 1)
             {
-                tobedonetext[i] = tolower(key[(char) tobedonetext[i] - 97]);
+                tobedonetext[i] = tolower(key[(int) tobedonetext[i] - 97]);
             }
             else if (isupper(tobedonetext[i]) !=0)
             {
-                tobedonetext[i] = toupper(key[(char) tobedonetext[i] - 65]);
+                tobedonetext[i] = toupper(key[(int) tobedonetext[i] - 65]);
             }
             else
             {
