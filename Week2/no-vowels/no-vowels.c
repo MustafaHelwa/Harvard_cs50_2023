@@ -13,8 +13,8 @@ int main(int argc, string argv[])
     for (int i = 0; i < argc; i++)
     {
         leet[i] = argv[i];
-        printf(" %s \n", argc[]);
+        printf(" %s \n", argv[i]);
     }
 
-    printf(" %s \n", argc[]);
+    printf(" %s \n", leet);
 }
