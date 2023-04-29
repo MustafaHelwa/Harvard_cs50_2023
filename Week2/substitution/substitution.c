@@ -7,7 +7,8 @@ bool keyChecker1 (string keyvalue, int keylength);
 
 int main (int argc, string argv[])
 {
-    bool check1 = keyChecker1 (argv[1], argc);
+    string key = argv[1];
+    bool check1 = keyChecker1 (key, strlen(key));
 
     printf("%i \n", check1);
 
@@ -19,11 +20,12 @@ bool keyChecker1 (string keyvalue, int keylength)
 {
     if (keylength != 26)
     {
-        printf("Key must contain 26 characters. %i\n", keylength);
+        printf ("Key must contain 26 characters. %i\n", keylength);
         return 1;
     }
-    else
+    else if
     {
-        return 0;
+
+        return 1;
     }
 }
