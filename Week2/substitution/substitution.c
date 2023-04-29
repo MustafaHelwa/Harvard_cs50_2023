@@ -70,12 +70,12 @@ string processedtext (string tobedonetext)
     {
          char charchecker = tobedonetext[i];
 
-        if (isalpha(charchecker) != 1 && islower(charchecker) != 1)
+        if (islower(charchecker) != 1)
         {
             int place = (int) tobedonetext[i] - 97;
             tobedonetext[i] =  key [place];
         }
-        else if (isupper(charchecker) != 1)
+        else
         {
             int place = (int) tobedonetext[i] - 65;
             printf("check");
