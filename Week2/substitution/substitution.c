@@ -19,8 +19,7 @@ int main (int argc, string argv[])
     }
     else
     {
-        key = argv[26];
-        bool check1 = keyChecker1 (key, strlen(key));
+        bool check1 = keyChecker1 (argv, argc);
 
         if (check1 == 1)
         {
