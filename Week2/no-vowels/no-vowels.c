@@ -15,6 +15,7 @@ int main(int argc, string argv[])
     for (int i = 0; i <= argc ; i++)
     {
         new_vowel = replace ((char) argv[1][i]);
+        
     }
 
     printf("\n");
@@ -28,27 +29,28 @@ char replace (char vowel)
         case 'a':
             printf("6");
             vowel = '6';
+            return vowel;
             break;
 
         case 'e':
             printf("3");
             vowel = '3';
-            break;
+
 
         case 'i':
             printf("1");
             vowel = '1';
-            break;
+
 
         case 'o':
             printf("0");
             vowel = '0';
-            break;
+
 
         default:
             printf("%c", vowel);
-            break;
+
     }
-    
+
     return vowel;
 }
