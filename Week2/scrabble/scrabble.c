@@ -39,6 +39,7 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     int score = 0;
 
+    // TODO: Assigning capital value for all char or 0 if not letter
     for (int i = 0; i < strlen(word); i++)
     {
         char n = word[i];
@@ -49,11 +50,19 @@ int compute_score(string word)
         }
         if (islower(n))
         {
-            n = (char) word[i] - 33;
+            n = (char) word[i] - 32;
         }
         else
         {
             n = 0;
+        }
+
+    //checking line:        printf("N value: %c\n", n);                         //Use %i to check char value ... A is 65
+
+    // TODO: Counting score based on POINTS array
+        if (n != 0)
+        {
+            score += POINTS[n - 65];                        // n will be char value from 65 to 96
         }
 
     }
