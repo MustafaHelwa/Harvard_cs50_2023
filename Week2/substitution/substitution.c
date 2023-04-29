@@ -6,7 +6,8 @@ string keyChecker (string xVal);
 
 int main (int argc, string argv[])
 {
-    key = keyChecker (argv[]);
+    string key;
+    key = keyChecker (argv[1]);
 }
 
 string keyChecker (string xVal)
@@ -14,9 +15,7 @@ string keyChecker (string xVal)
     if (strlen(sxVal) < 26)
     {
         printf("Key must contain 26 characters.");
-        return 1;
+        return (string) 1;
     }
 
-
-    for (i < argc, )
 }
