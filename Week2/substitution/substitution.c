@@ -13,7 +13,12 @@ string key;                                     //global variable since it will 
 //##########################################################################//
 int main (int argc, string argv[])
 {
-
+    if (argv[2] != 0 || argv[1] == 0)
+    {
+        printf("Usage: ./substitution key");
+    }
+    else
+    {
     key = argv[1];
     bool check1 = keyChecker1 (key, strlen(key));
 
@@ -29,6 +34,7 @@ int main (int argc, string argv[])
 
         printf("ciphertext: %s\n", ciphertext);
 
+    }
     }
 }
 
