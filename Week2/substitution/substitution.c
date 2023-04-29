@@ -53,7 +53,7 @@ bool keyChecker1 (string keyvalue, int keylength)
     {
         for (int i = 0; i < keylength; i++)
         {
-            char keyentry = (char) keyvalue[i];
+            char keyentry = (char) tolower(keyvalue[i]);
             if (isalpha(keyentry) == 0)
             {
                 printf ("Key must only contain alphabetic characters.\n");
