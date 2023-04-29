@@ -12,11 +12,13 @@ int main (int argc, string argv[])
 
     if (check1 == 1)
     {
-        break; 
+// empty to stop the code if the key is not acceptable
     }
-    string plaintext = get_string("plaintext: \n");
-    string ciphertext = get_string("ciphertext: \n");
-
+    else
+    {
+        string plaintext = get_string("plaintext: \n");
+        string ciphertext = get_string("ciphertext: \n");
+    }
 }
 
 //26 letter checker
