@@ -65,7 +65,7 @@ bool keyChecker1 (string keyvalue, int keylength)
             }
         }
     }
-    return 0;
+    return 1;
 }
 
 //##########################################################################//
