@@ -2,23 +2,26 @@
 #include <string.h>
 #include <stdio.h>
 
-int keyChecker1 (int keylength);
+string keyChecker1 (string key);
 
 
 int main (int argc, string argv[])
 {
-    int check1 = keyChecker1 (argc);
-    printf("%i \n", check1);
+    key = key[argc]
+    string check1 = keyChecker1 (argv);
+    printf("%s \n", check1);
 
 }
 
 //26 letter checker
 
-int keyChecker1 (keylength)
+string keyChecker1 (key)
 {
+    int keylength = strlen(key);
+
     if (keylength != 26)
     {
-        printf("Key must contain 26 characters.\n");
+        printf("Key must contain 26 characters. %i\n", keylength);
         return 1;
     }
     else
