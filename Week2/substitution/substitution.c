@@ -15,7 +15,7 @@ int main (int argc, string argv[])
 
 //26 letter checker
 
-bool keyChecker1 (keyvalue, keylength)
+bool keyChecker1 (string keyvalue, int keylength)
 {
     if (keylength != 26)
     {
