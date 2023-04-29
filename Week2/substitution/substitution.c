@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <string.h>
 #include <stdio.h>
+#include <ctype.h>
 
 bool keyChecker1 (string keyvalue, int keylength);
 string processedtext (string tobedonetext);
@@ -70,10 +71,21 @@ string processedtext (string tobedonetext)
     {
         if (((char)tobedonetext[i] > 96 && (char)key[i] > 96) || ((char)tobedonetext[i] < 96 && (char)key[i] < 96))
         {
-            for (int i = 0; i < strlen(tobedonetext); i++)
+            for (int j = 0; j < strlen(tobedonetext); j++)
             {
-                char asciival = char tobedonetext[i]
-                tobedonetext[i] = key[]
+                char asciival = (char) tobedonetext[j];
+                if (isupper(tobedonetext[j]))
+                {
+                    tobedonetext[j] = toupper(key[asciival - 65]);
+                }
+                else if (islower(tobedonetext[j]))
+                {
+                    tobedonetext[j] = tolower(key[asciival - 97]);
+                }
+                else
+                {
+                    tobedonetext[j] = tobedonetext[j];
+                }
             }
         }
     }
