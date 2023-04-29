@@ -77,16 +77,14 @@ string processedtext (string tobedonetext)
                 int place = (int) tobedonetext[i] - 97;
                 tobedonetext[i] =  key [place];
             }
-            else if (isupper(charchecker) != 1)
+            else
             {
                 int place = (int) tobedonetext[i] - 65;
+                printf("check");
                 tobedonetext[i] =  key [place];
             }
         }
-        else
-        {
-            tobedonetext[i] = tobedonetext[i];
-        }
+
     }
     return tobedonetext;
 }
