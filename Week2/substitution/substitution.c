@@ -13,26 +13,20 @@ string key;                                     //global variable since it will 
 //##########################################################################//
 int main (int argc, string argv[])
 {
-    if (argc != 2)
+    key = argv[1];
+    bool check1 = keyChecker1 (key, strlen(key));
+
+    if (check1 == 1)
     {
-        printf("Usage: ./substitution key\n");
+// empty to stop the code if the key is not acceptable
     }
     else
     {
-        bool check1 = keyChecker1 (argv, argc);
+        string plaintext = get_string ("plaintext: ");
+        string ciphertext = processedtext (plaintext);
 
-        if (check1 == 1)
-        {
-// empty to stop the code if the key is not acceptable
-        }
-        else
-        {
-            string plaintext = get_string ("plaintext: ");
-            string ciphertext = processedtext (plaintext);
+        printf("ciphertext: %s\n", ciphertext);
 
-            printf("ciphertext: %s\n", ciphertext);
-
-        }
     }
 }
 
@@ -52,7 +46,7 @@ bool keyChecker1 (string keyvalue, int keylength)
     {
         for (int i = 0; i < keylength; i++)
         {
-            char keyentry = (char) tolower(keyvalue[i]);
+            char keyentry = (char) keyvalue[i];
             if (isalpha(keyentry) == 0)
             {
                 printf ("Key must only contain alphabetic characters.\n");
@@ -62,7 +56,7 @@ bool keyChecker1 (string keyvalue, int keylength)
             {
                 for (int j = 0; j < keylength; j++)
                 {
-                    if(tolower(keyentry) == (char) tolower(keyvalue[j]) && i != j)
+                    if(keyentry == (char) keyvalue[j] && i != j)
                     {
                         printf ("Key must not ccontain repeated characters.\n");
                         return 1;
@@ -92,12 +86,12 @@ string processedtext (string tobedonetext)
         if (islower(tester) != 0)                           //small will be - 97 since a is 97 and it will be 0 in key array
         {
             int place = (int) tobedonetext[i] - 97;
-            tobedonetext[i] =  tolower(argv [place]);        //tolower() will make sure that it is lower
+            tobedonetext[i] =  tolower(key [place]);        //tolower() will make sure that it is lower
         }
         else if (isupper(tester) != 0)                      //repeated with upper case instead of lower
         {
             int place = (int) tobedonetext[i] - 65;
-            tobedonetext[i] =  toupper(argv [place]);
+            tobedonetext[i] =  toupper(key [place]);
         }
         else if (isalpha(tester) == 0)                      //if it is neither upper nor lower it shouldn't be an alphabit char
         {
