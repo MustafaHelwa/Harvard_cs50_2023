@@ -45,8 +45,18 @@ int compute_score(string word)
 
         if (isupper(n))
         {
-            n = (char) word[i]
+            n = (char) word[i];
         }
+        if (islower(n))
+        {
+            n = (char) word[i] - 33;
+        }
+        else
+        {
+            n = 0;
+        }
+
+        score += n; 
     }
 
 
