@@ -18,7 +18,7 @@ int main (int argc, string argv[])
     }
     else
     {
-        string plaintext = get_string ("plaintext: \n");
+        string plaintext = get_string ("plaintext: ");
         string ciphertext = processedtext (plaintext);
 
     }
@@ -47,7 +47,7 @@ bool keyChecker1 (string keyvalue, int keylength)
             {
                 for (int j = 0; j < keylength; j++)
                 {
-                    if(keyentry == (char) keyvalue[j])
+                    if(keyentry == (char) keyvalue[j] && i != j)
                     {
                         printf ("Key must not ccontain repeated characters.\n");
                         return 1;
