@@ -67,7 +67,7 @@ string processedtext (string tobedonetext)
 {
     for (int i = 0; i < strlen(tobedonetext); i++)
     {
-        if (isalpha(tobedonetext[i]) != 0)
+        if (isalpha(tobedonetext[i]) == 1)
         {
             if (islower(tobedonetext[i]) == 1)
             {
