@@ -3,15 +3,15 @@
 #include <stdio.h>
 #include <ctype.h>
 
-bool keyChecker1 (string keyvalue, int keylength);
-string processedtext (string tobedonetext);
+bool keyChecker1(string keyvalue, int keylength);
+string processedtext(string tobedonetext);
 
 string key;                                     //global variable since it will be used in all below functions
 
 //##########################################################################//
 //##################         Main code functions          ##################//
 //##########################################################################//
-int main (int argc, string argv[])
+int main(int argc, string argv[])
 {
     if (argc < 2 || argc > 2)
     {
@@ -20,22 +20,22 @@ int main (int argc, string argv[])
     }
     else
     {
-    key = argv[1];
-    bool check1 = keyChecker1 (key, strlen(key));
+        key = argv[1];
+        bool check1 = keyChecker1(key, strlen(key));
 
-    if (check1 == 1)
-    {
+        if (check1 == 1)
+        {
 // empty to stop the code if the key is not acceptable
-    return 1;
-    }
-    else
-    {
-        string plaintext = get_string ("plaintext: ");
-        string ciphertext = processedtext (plaintext);
+            return 1;
+        }
+        else
+        {
+            string plaintext = get_string("plaintext: ");
+            string ciphertext = processedtext(plaintext);
 
-        printf("ciphertext: %s\n", ciphertext);
+            printf("ciphertext: %s\n", ciphertext);
 
-    }
+        }
     }
 }
 
@@ -44,11 +44,11 @@ int main (int argc, string argv[])
 //##################        key checking function         ##################//
 //##########################################################################//
 
-bool keyChecker1 (string keyvalue, int keylength)
+bool keyChecker1(string keyvalue, int keylength)
 {
     if (keylength != 26)
     {
-        printf ("Key must contain 26 characters.\n");
+        printf("Key must contain 26 characters.\n");
         return 1;
     }
     else
@@ -58,16 +58,16 @@ bool keyChecker1 (string keyvalue, int keylength)
             char keyentry = (char) keyvalue[i];
             if (isalpha(keyentry) == 0)
             {
-                printf ("Key must only contain alphabetic characters.\n");
+                printf("Key must only contain alphabetic characters.\n");
                 return 1;
             }
             else
             {
                 for (int j = 0; j < keylength; j++)
                 {
-                    if(keyentry == (char) keyvalue[j] && i != j)
+                    if (keyentry == (char) keyvalue[j] && i != j)
                     {
-                        printf ("Key must not ccontain repeated characters.\n");
+                        printf("Key must not ccontain repeated characters.\n");
                         return 1;
                     }
                 }
@@ -80,7 +80,7 @@ bool keyChecker1 (string keyvalue, int keylength)
 //##########################################################################//
 //##################         processing function          ##################//
 //##########################################################################//
-string processedtext (string tobedonetext)
+string processedtext(string tobedonetext)
 {
 //getting the length of plaintext that will be processed
 
