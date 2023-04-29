@@ -70,18 +70,23 @@ string processedtext (string tobedonetext)
     {
         int tester = (int) tobedonetext[i];
 
-        if (islower(tester) == 1)
+        if (islower(tester) != 0)
         {
             int place = (int) tobedonetext[i] - 97;
-            tobedonetext[i] =  key [place];
+            tobedonetext[i] =  (char) islower((int) key [place]);
+            printf("failed1\n");
+        }
+        else if (isupper(tester) != 0)
+        {
+            int place = (int) tobedonetext[i] - 65;
+            tobedonetext[i] =  (char) isupper((int) key [place]);
+            printf("failed2\n");
         }
         else
         {
-            printf("failed1\n");
+            tobedonetext[i] = (char) tobedonetext[i];
+            printf("failed3\n");
         }
-        printf("failed2\n");
     }
-    printf("Failed3\n");
-
     return tobedonetext;
 }
