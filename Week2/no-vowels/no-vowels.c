@@ -8,6 +8,9 @@
 
 int main(int argc, string argv[])
 {
-    for ()
-    printf()
+    for (int i = 0; i < argc; i++)
+    {
+        
+    }
+
 }
