@@ -56,8 +56,7 @@ int compute_score(string word)
             n = 0;
         }
 
-        score += n; 
     }
 
-
+    return score;
 }
