@@ -13,6 +13,18 @@ int main(int argc, string argv[])
     for (int i = 0; i < argc; i++)
     {
         leet[i] = argv[i];
+
+        switch(leet[i])
+        {
+            case a || A:
+                leet[i] = 4;
+
+            case b || B:
+                leet[i] = 8;
+
+            default:
+                break;
+        }
         printf(" %s \n", argv[i]);
     }
 
