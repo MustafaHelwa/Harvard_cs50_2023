@@ -33,9 +33,9 @@ bool keyChecker1 (string keyvalue, int keylength)
                 printf ("Key must only contain alphabetic characters.\n");
                 return 1;
             }
-            else
+            else if 
             {
-                
+
             }
         }
 
