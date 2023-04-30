@@ -212,6 +212,7 @@ void print_word(string guess, int wordsize, int status[])
         // keep track of the total score by adding each individual letter's score from above
     }
 
+
     printf("\n");
     return;
 }
