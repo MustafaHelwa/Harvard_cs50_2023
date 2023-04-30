@@ -171,6 +171,8 @@ int check_word(string guess, int wordsize, int status[], string choice)
             score = EXACT;
             status[i] = EXACT;
             return score;
+
+
         }
         else
         {
@@ -181,6 +183,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 {
                     score = CLOSE;
                     status[i] = CLOSE;
+                                printf(" exact");
                 }
             }
             return score;
