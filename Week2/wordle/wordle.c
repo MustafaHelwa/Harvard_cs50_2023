@@ -121,7 +121,7 @@ int main(int argc, string argv[])
 
 string get_guess(int wordsize)
 {
-    string guess = "";
+    string guess[wordsize];
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
@@ -130,7 +130,7 @@ string get_guess(int wordsize)
     {
         guess = get_string("");
     }
-    while (strlent(guess) > wordsize +1)
+    while (strlen(guess) > wordsize +1)
 
     return guess;
 }
