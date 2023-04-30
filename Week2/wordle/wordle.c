@@ -148,7 +148,7 @@ string get_guess(int wordsize)
         guess = get_string ("Input a %i-letter word: ", wordsize);                  //getting guess entry
         guesslength = strlen (guess);                                               //calculating guess length
     }
-    while (guesslength < wordsize || guesslength > wordsize + 1);   //repeating if it is longer than the word+1
+    while (guesslength != wordsize);   //repeating if it is longer than the word+1
 
     return guess;
 }
