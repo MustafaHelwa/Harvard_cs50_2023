@@ -165,7 +165,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
             status[i] = EXACT;
             score += EXACT;
 //            printf("%i exa ", score);                 //debugging code
-            return score;
         }
         else
         {
