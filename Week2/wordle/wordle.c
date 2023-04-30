@@ -126,7 +126,8 @@ string get_guess(int wordsize)
     // ensure users actually provide a guess that is the correct length
     // TODO #3
 
-    
+    do
+
     return guess;
 }
 
