@@ -121,7 +121,15 @@ int main(int argc, string argv[])
     // Print the game's result
     // TODO #7
 
-    printf()
+    if (score == EXACT * wordsize)
+    {
+        printf("You won!");
+    }
+    else
+    {
+        printf(")
+    }
+
 
     // that's all folks!
     return 0;
@@ -193,15 +201,15 @@ void print_word(string guess, int wordsize, int status[])
     {
         if (status[i] == 2)
         {
-            printf(GREEN"%c"RESET"\n", guess[i]);
+            printf(GREEN"%c"RESET, guess[i]);
         }
         else if (status[i] == 1)
         {
-            printf(YELLOW"%c"RESET"\n", guess[i]);
+            printf(YELLOW"%c"RESET, guess[i]);
         }
         else
         {
-            printf(RED"%c"RESET"\n", guess[i]);
+            printf(RED"%c"RESET, guess[i]);
         }
     }
 
