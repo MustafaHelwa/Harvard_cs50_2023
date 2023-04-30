@@ -44,7 +44,7 @@ int main(int argc, string argv[])
 
     //if 1 streng of values entered but it is over than 8 or less than 5 or if it recorded more than one integer, reject it
 
-    if ( argc != 1 && ((char) argv[1][0] > '8' || (char)argv[1][0] < '5' || (char) argv[1][1] != '\0'))
+    if (argc != 1 && ((char) argv[1][0] > '8' || (char)argv[1][0] < '5' || (char) argv[1][1] != '\0'))
     {
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
@@ -145,8 +145,8 @@ string get_guess(int wordsize)
 
     do
     {
-        guess = get_string ("Input a %i-letter word: ", wordsize);                  //getting guess entry
-        guesslength = strlen (guess);                                               //calculating guess length
+        guess = get_string("Input a %i-letter word: ", wordsize);                  //getting guess entry
+        guesslength = strlen(guess);                                                //calculating guess length
     }
     while (guesslength != wordsize);   //repeating if it is longer than the word+1
 
@@ -162,11 +162,11 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     // HINTS
     // iterate over each letter of the guess
-        // iterate over each letter of the choice
-            // compare the current guess letter to the current choice letter
-                // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
-                // if it's in the word, but not the right spot, score CLOSE point (yellow)
-        // keep track of the total score by adding each individual letter's score from above
+    // iterate over each letter of the choice
+    // compare the current guess letter to the current choice letter
+    // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
+    // if it's in the word, but not the right spot, score CLOSE point (yellow)
+    // keep track of the total score by adding each individual letter's score from above
 
     for (int i = 0; i < wordsize; i++)
     {
@@ -178,7 +178,8 @@ int check_word(string guess, int wordsize, int status[], string choice)
         }
         else
         {
-            for (int j =0; j < wordsize; j++)
+            //Nested loop to check each char with the choice word, since it didn't match exactly
+            for (int j = 0; j < wordsize; j++)
             {
                 if (guess[i] == choice[j])
                 {
