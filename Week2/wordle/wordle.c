@@ -158,28 +158,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // if it's in the word, but not the right spot, score CLOSE point (yellow)
     // keep track of the total score by adding each individual letter's score from above
 
-    for (int i = 0; i < strlen(guess); i++)
-    {
-
-        if (guess[i] == choice[i])
-        {
-            score = EXACT;
-            status[i] = EXACT;
-            printf("excat");
-        }
-        else
-        {
-            for (int j = 0; j < strlen(guess); j++)
-            {
-                if(guess[i] == choice[j] && i != j)
-                {
-                    score = CLOSE;
-                    status[i] = CLOSE;
-                                printf(" Close");
-                }
-            }
-        }
-    }
 
     return score;
 }
@@ -188,22 +166,6 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
-
-    for (int i = 0; i < wordsize; i++)
-    {
-        if (status[i] == EXACT)
-        {
-            printf(GREEN"%c\n"RESET, guess[i]);
-        }
-        else if (status[i] == CLOSE)
-        {
-            printf(YELLOW"%c\n"RESET, guess[i]);
-        }
-        else
-        {
-            printf(RED"%c\n"RESET, guess[i]);
-        }
-    }
 
 
     printf("\n");
