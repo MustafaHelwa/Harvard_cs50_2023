@@ -151,9 +151,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
 
-    char guess_letter;
-    char choice_letter;
-
     // HINTS
     // iterate over each letter of the guess
     // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
@@ -163,30 +160,24 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     for (int i = 0; i < strlen(guess); i++)
     {
-        guess_letter = guess[i];
-        choice_letter = choice[i];
 
-        if (guess_letter == choice_letter)
+        if (guess[i] == choice[i])
         {
             score = EXACT;
             status[i] = EXACT;
-            return score;
-
-
+            printf("excat");
         }
         else
         {
             for (int j = 0; j < strlen(guess); j++)
             {
-                choice_letter = choice [j];
-                if(guess_letter == choice_letter)
+                if(guess[i] == choice[j] && i != j)
                 {
                     score = CLOSE;
                     status[i] = CLOSE;
                                 printf(" exact");
                 }
             }
-            return score;
         }
     }
 
