@@ -158,6 +158,8 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 // if it's in the word, but not the right spot, score CLOSE point (yellow)
         // keep track of the total score by adding each individual letter's score from above
 
+    
+
     return score;
 }
 
