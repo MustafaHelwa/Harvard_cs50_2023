@@ -191,11 +191,11 @@ void print_word(string guess, int wordsize, int status[])
 
     for (int i = 0; i < wordsize; i++)
     {
-        if (status[i] == 2)
+        if (status[i] == EXACT)
         {
             printf(GREEN"%c\n"RESET, guess[i]);
         }
-        else if (status[i] == 1)
+        else if (status[i] == CLOSE)
         {
             printf(YELLOW"%c\n"RESET, guess[i]);
         }
