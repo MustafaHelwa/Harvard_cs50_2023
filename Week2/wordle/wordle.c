@@ -26,9 +26,14 @@ void print_word(string guess, int wordsize, int status[]);
 int main(int argc, string argv[])
 {
     // ensure proper usage
-    if (argc != 2 || (char) argv[1][0] > '8' || (char)argv[1][0] < '5')
+    if (argc != 2)
     {
-        printf("Error: wordsize must be either 5, 6, 7, or 8");
+        printf("Usage: ./wordle wordsize\n");
+        return 1;
+    }
+    else if ( argc ==2 && ((char) argv[1][0] > '8' || (char)argv[1][0] < '5'))
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
 
