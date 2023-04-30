@@ -164,7 +164,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
         {
             status[i] = EXACT;
             score += EXACT;
-            printf("%i exa ", score);
+//            printf("%i exa ", score);                 //debugging code
             return score;
         }
         else
@@ -175,13 +175,13 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 {
                     status[i] = CLOSE;
                     score += CLOSE;
-                    printf("%i clo ", score);
+//                    printf("%i clo ", score);         //debugging code
                 }
                 else
                 {
                     status[i] = WRONG;
                     score += WRONG;
-                    printf("%i wro ", score);
+//                    printf("%i wro ", score);         //debugging code
                 }
             }
         }
@@ -194,6 +194,22 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
+    for (int i = 0; i < wordsize; i++)
+    {
+        if (status[i] == 2)
+        {
+            printf(GREEN"%c"RESET"\n", status[i]);
+        }
+        else if (status[i] == 1)
+        {
+            printf(YELLOW"%c"RESET"\n", status[i]);
+        }
+        else
+        {
+            printf(RED"%c"RESET"\n", status[i]);
+        }
+    }
+
 
     printf("\n");
     return;
