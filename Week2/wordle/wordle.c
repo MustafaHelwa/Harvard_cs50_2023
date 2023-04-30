@@ -26,6 +26,12 @@ void print_word(string guess, int wordsize, int status[]);
 int main(int argc, string argv[])
 {
     // ensure proper usage
+    if (argc != 2 || (char) argv[1][0] > '8' || (char)argv[1][0] < '5')
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8");
+        return 1;
+    }
+
     // TODO #1
 
     int wordsize = 0;
@@ -79,7 +85,7 @@ int main(int argc, string argv[])
         int score = check_word(guess, wordsize, status, choice);
 
         printf("Guess %i: ", i + 1);
-        
+
         // Print the guess
         print_word(guess, wordsize, status);
 
