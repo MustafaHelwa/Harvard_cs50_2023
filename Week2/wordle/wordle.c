@@ -127,6 +127,10 @@ string get_guess(int wordsize)
     // TODO #3
 
     do
+    {
+        guess = get_string("");
+    }
+    while (strlent(guess) > wordsize +1)
 
     return guess;
 }
