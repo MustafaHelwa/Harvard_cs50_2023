@@ -56,7 +56,7 @@ int main(int argc, string argv[])
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
-    sprintf(wl_filename, "%c.txt", wordsize);
+    sprintf(wl_filename, "%c.txt", wordsize);                   // changed %i to %c to take the char of wordsize value above
     FILE *wordlist = fopen(wl_filename, "r");
     if (wordlist == NULL)
     {
