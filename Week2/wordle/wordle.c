@@ -121,14 +121,12 @@ int main(int argc, string argv[])
 
 string get_guess(int wordsize)
 {
+    string guess = "";
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
 
-        string guess = get_string("");
-        int guesssize = strlen(guess);
-        printf(" %i \n", guesssize);
-
+    
     return guess;
 }
 
