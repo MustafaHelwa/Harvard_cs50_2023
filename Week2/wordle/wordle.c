@@ -96,11 +96,9 @@ int main(int argc, string argv[])
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
 
-        status[strlen(guess)] = {0};
-
-        for (int i = 0; i < strlen(guess); i++)
+        for (int j = 0; j < strlen(guess); j++)
         {
-            printf(" %i ", status[i]);
+            status[j] = 0;                                  // j since it is nested loop test using: printf(" %i ", status[j]);
         }
 
 
