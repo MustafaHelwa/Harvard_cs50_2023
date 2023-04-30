@@ -51,12 +51,12 @@ int main(int argc, string argv[])
     }
     else
     {
-        wordsize = argv[1][0];
+        wordsize = argv[1][0] - 48;              //'0' int is char 48 in ASCII, this it is deducted to get the entered value
     }
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
-    sprintf(wl_filename, "%c.txt", wordsize);                   // changed %i to %c to take the char of wordsize value above
+    sprintf(wl_filename, "%i.txt", wordsize);
     FILE *wordlist = fopen(wl_filename, "r");
     if (wordlist == NULL)
     {
