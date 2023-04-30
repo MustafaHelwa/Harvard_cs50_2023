@@ -127,7 +127,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("Code word is: %s.", choice);
+        printf("Code word was: %s.\n", choice);
     }
 
 
