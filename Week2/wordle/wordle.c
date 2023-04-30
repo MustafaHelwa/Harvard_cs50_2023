@@ -176,12 +176,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
                     score += CLOSE;
 //                    printf("%i clo ", score);         //debugging code
                 }
-                else
-                {
-                    status[i] = WRONG;
-                    score += WRONG;
-//                    printf("%i wro ", score);         //debugging code
-                }
             }
         }
     }
