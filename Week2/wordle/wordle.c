@@ -164,7 +164,26 @@ int check_word(string guess, int wordsize, int status[], string choice)
         {
             status[i] = EXACT;
             score += EXACT;
+            printf("%i exa ", score);
             return score;
+        }
+        else
+        {
+            for (int j =0; j < wordsize; j++)
+            {
+                if (guess[i] == choice[j])
+                {
+                    status[i] = CLOSE;
+                    score += CLOSE;
+                    printf("%i clo ", score);
+                }
+                else
+                {
+                    status[i] = WRONG;
+                    score += WRONG;
+                    printf("%i wro ", score);
+                }
+            }
         }
     }
 
