@@ -121,18 +121,18 @@ int main(int argc, string argv[])
 
 string get_guess(int wordsize)
 {
-    string guess[wordsize];
+    string guess[wordsize + 1];
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
 
     do
     {
-        guess = get_string("");
+        guess[wordsize] = get_string("");
     }
-    while (strlen(guess) > wordsize +1)
+    while (strlen(guess[wordsize]) == wordsize + 1);
 
-    return guess;
+    return guess[wordsize + 1];
 }
 
 int check_word(string guess, int wordsize, int status[], string choice)
