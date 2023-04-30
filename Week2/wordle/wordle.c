@@ -99,7 +99,6 @@ int main(int argc, string argv[])
         for (int j = 0; j < strlen(guess); j++)
         {
             status[j] = WRONG;                            // j since it is nested loop test using: printf(" %i ", status[j]);
-
         }
 
 
