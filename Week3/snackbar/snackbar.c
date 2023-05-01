@@ -74,27 +74,56 @@ int main(void)
 // Add at least the first for items to the menu array
 void add_items(void)
 {
-    menu.item = {"Burger", "Vegan Burger", "Hot Dog", "Cheese Dog", "Fries", "Cheese Fries", "Cold Pressed Juice", "Cold Brew", "Water", "Soda"};
+
+    //Just filling by hand
+    menu[0].item = "Burger";
     menu[0].price = 9.5;
 
-/*
- * Beach Burger Shack has the following 10 items on their menu
- * Burger: $9.5
- * Vegan Burger: $11
- * Hot Dog: $5
- * Cheese Dog: $7
- * Fries: $5
- * Cheese Fries: $6
- * Cold Pressed Juice: $7
- * Cold Brew: $3
- * Water: $2
- * Soda: $2
-*/
+    menu[1].item = "Vegan Burger";
+    menu[1].price = 11;
+
+    menu[2].item = "Hot Dog";
+    menu[2].price = 5;
+
+    menu[3].item = "Cheese Dog";
+    menu[3].price = 7;
+
+    menu[4].item = "Fries";
+    menu[4].price = 5;
+
+    menu[5].item = "Cheese Fries";
+    menu[5].price = 6;
+
+    menu[6].item = "Cold Pressed Juice";
+    menu[6].price = 7;
+
+    menu[7].item = "Cold Brew";
+    menu[7].price = 3;
+
+    menu[8].item = "Water";
+    menu[8].price = 2;
+
+    menu[9].item = "Soda";
+    menu[9].price = 2;
+
     return;
 }
 
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    return 0.0;
+
+    //loop in the full list of menu items to find the writen item
+    for (int i = 0; i < NUM_ITEMS; i++)
+    {
+        //strcasecmp will compare two strings ignoring case, if matching, it will return 0
+        if (strcasecmp(item, menu[i].item) == 0)
+        {
+            //if the writen item is within the menu it will return the value, else it will return 0.0 as below
+            return menu[i].price;
+        }
+    }
+
+
+    return 0.0;     //if not found it will return 0 in float
 }
