@@ -23,39 +23,9 @@ int main(void)
     printf("%i\n", convert(input));
 }
 
-int convert(string input)
-{
-    // TODO
-
-    int n = strlen(input);
-    string dummyinput[n - 2];
-
-    if (n > 1)
-    {
-
-    for (int j = 0; j < n - 2; j++)
-    {
-        dummyinput[j] = input[j];
-    }
-
-    return ((10 * convert (dummyinput)) + (input[n - 1] - '0'));
-
-    }
-    else if (n == 1)
-    {
-        return input[n - 1] - '0';
-    }
-    else
-    {
-        return 1;
-    }
-
-
-}
-
 
 // this code do the job without any Recursive function
-/*
+
 int convert(string input)
 {
     // TODO
@@ -75,4 +45,3 @@ int convert(string input)
     return num;
 
 }
-*/
