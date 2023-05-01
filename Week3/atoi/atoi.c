@@ -39,7 +39,7 @@ int convert(string input)
 
         input[n - 1] = '\0';
 
-        return ((10 * convert (input)) + (input[n - 1] - '0'));
+        return ((10 * convert (input)) + (input[n - i - 1] - '0'));
     }
 
     return 0;
