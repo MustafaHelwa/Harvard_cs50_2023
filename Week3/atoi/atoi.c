@@ -30,16 +30,15 @@ int convert(string input)
     int n = strlen(input);
     int i = 1;
 
-    if (n > i)
+    if (n > 1)
     {
 
-    i++;
     return ((10 * convert (input)) + (input[n - i] - '0'));
 
     }
     else if (n == 1)
     {
-        return input[n - i] - '0';
+        return input[n - 1] - '0';
     }
     else
     {
