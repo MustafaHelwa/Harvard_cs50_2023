@@ -30,23 +30,15 @@ int convert(string input)
     int i = 0;
 
     //if input is only one digit
-    //else
-
-    for (int j = 0; j < len; j++)
+    if (input[i + 1] == '\0')
     {
-        if (j < len)
-        {
-            input[j] = input[j];
-        }
-
-        if (j == len - 1)
-        {
-            input[j] = '\0';
-        }
+        return input[i] - '0';
     }
+
+    //else
     i++;
 
-    return (10 * convert (input) + input [len - 1] - '0');
+    return (10 * convert(input) +(input[len - 1] - '0'));
 
 
 }
