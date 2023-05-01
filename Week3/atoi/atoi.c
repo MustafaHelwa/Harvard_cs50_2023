@@ -30,11 +30,6 @@ int convert(string input)
     int i = 0;
 
     //if input is only one digit
-    if (len == 1)
-    {
-        return input[i] - '0';
-    }
-
     //else
 
     for (int j = 0; j < len; j++)
