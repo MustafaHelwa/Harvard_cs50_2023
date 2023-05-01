@@ -33,6 +33,8 @@ int convert(string input)
     if (n > 1)
     {
 
+    return ((10 * convert (input)) + (input[n - 1] - '0'));
+
     for (int j = 0; j < n - 1; j++)
     {
         if (j < n - i)
@@ -46,8 +48,7 @@ int convert(string input)
 
     }
     i++;
-    
-    return ((10 * convert (input)) + (input[n - 1] - '0'));
+ 
 
     }
     else if (n == 1)
