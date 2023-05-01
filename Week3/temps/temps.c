@@ -79,11 +79,11 @@ void sort_cities(void)
                 string shiftingcity = temps[i].city;
                 int    shiftingtemp = temps[i].temp;
 
-                temps[i].city = temps[i+1].city;
-                temps[i+1].city = shiftingcity;
+                temps[i].city = temps[i + 1].city;
+                temps[i + 1].city = shiftingcity;
 
-                temps[i].temp = temps[i+1].temp;
-                temps[i+1].temp = shiftingtemp;
+                temps[i].temp = temps[i + 1].temp;
+                temps[i + 1].temp = shiftingtemp;
 
             }
         }
