@@ -36,13 +36,16 @@ int convert(string input)
             return 0;
         }
 
-    trans = input[i] - '0';
-
     convert (trans);
+
+    for (int j = 0; j < 2; j++)
+    {
+        trans[i] = 
+    }
 
     i++;
 
-    return (num * 10) + (int) trans;
+    return (num * 10) + (int)(trans - '0');
 
 
 }
