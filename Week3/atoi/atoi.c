@@ -26,9 +26,8 @@ int main(void)
 int convert(string input)
 {
     // TODO
-
-    int n = strlen (input);
-    int i = n - 1;
+    int n;
+    int i = 0;
 
     if (i == n)
     {
