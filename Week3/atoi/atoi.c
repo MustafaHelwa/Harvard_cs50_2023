@@ -26,7 +26,7 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int i = 0;
+
     int n = strlen(input);
 
 
@@ -35,9 +35,8 @@ int convert(string input)
         return input[n - 1] - '0';
     }
 
-    i++;
 
-    input[n - i] = '\0';
+    input[n - 1] = '\0';
 
     return ((10 * convert (input)) + (input[n - 1] - '0'));
 
