@@ -26,15 +26,16 @@ int main(void)
 int convert(string input)
 {
     // TODO
+    long num;
+    int i = 0;
 
-    for (int i = 0; i < strlen(input); i++)
-    {
-        if (input[i] == '\0')
+    //break value if the input reached the last NULL value '\0'
+    if (input[i] == '\0')
         {
             return 0;
         }
-        else 
-    }
+
+
 
 
 
