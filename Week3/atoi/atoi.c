@@ -26,8 +26,10 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    long num;
+    int num;
     int i = 0;
+    string trans;
+    char zero = 0;
 
     //break value if the input reached the last NULL value '\0'
     if (input[i] == '\0')
@@ -35,9 +37,12 @@ int convert(string input)
             return 0;
         }
 
-    convert (input[i] - (char) '0');
+    trans = input[i] - zero;
 
-    num = (num * 10) + input[i];
+    convert (trans);
+
+    num = (num * 10) + (int) trans;
+    i++;
 
     return num;
 
