@@ -63,4 +63,8 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
+    // for sorting explaination, refer to https://www.programiz.com/dsa/bubble-sort
+    //since O(n^2) is required, I'll use bubble sort
+
+    
 }
