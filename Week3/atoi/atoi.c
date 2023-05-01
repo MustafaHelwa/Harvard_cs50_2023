@@ -26,12 +26,28 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    
+    int num = 0;
+    int i = 0;
 
-    return num;
+    if (i == strlen(input))
+    {
+        return 0;
+    }
+
+    convert (input);
+
+    for (int j = 0; j < strlen(input) - i; j++)
+    {
+        input[j] = input[j];
+    }
+
+    input [strlen(input) - i] = '\0';
+
+    i++;
+
+    return num * 10 + (input[i] - '0');
 
 }
-*/
 
 
 // this code do the job without any Recursive function
