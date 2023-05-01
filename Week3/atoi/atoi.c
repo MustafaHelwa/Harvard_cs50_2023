@@ -26,22 +26,19 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int num = 0;
     int tran;
-    int i = 0;
+    int n = strlen (input);
+    int i = n-1;
 
-    if (input[i] == '\0')
+    if (input <= 0)
     {
         return 0;
     }
 
-    tran = (int) input[i] - 30;
+    convert (input[n] - input[i]);
 
-    while (input[i] >= '0' && input[i] <= '9')
-    {
-        num = num * 10 + (input[i] - '0');
-        i++;
-    }
+    num = num * 10 + (input[i] - '0');
+    i++;
 
     return num;
 
