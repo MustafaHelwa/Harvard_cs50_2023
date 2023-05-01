@@ -27,7 +27,15 @@ int convert(string input)
 {
     // TODO
 
-    if ()
+    for (int i = 0; i < strlen(input); i++)
+    {
+        if (input[i] == '\0')
+        {
+            return 0;
+        }
+        else 
+    }
+
 
 
 }
