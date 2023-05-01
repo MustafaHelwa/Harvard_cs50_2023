@@ -35,8 +35,11 @@ int convert(string input)
             return 0;
         }
 
+    convert (input[i] - (char) '0');
 
+    num = (num * 10) + input[i];
 
+    return num;
 
 
 }
