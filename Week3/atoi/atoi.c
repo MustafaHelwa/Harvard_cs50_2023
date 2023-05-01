@@ -29,6 +29,14 @@ int convert(string input)
     int num;
     int i = 0;
 
-    if (i = )
+    if (input[i] = '\0')
+    {
+        return 0;
+    }
+
+    for (int n = strlen(input); n - 1 > i; i++)
+    {
+        
+    }
 
 }
