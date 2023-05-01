@@ -26,8 +26,24 @@ int main(void)
 int convert(string input)
 {
     // TODO
+
+
+    return num;
+
+}
+*/
+
+
+// this code do the job without any Recursive function
+/*
+int convert(string input)
+{
+    // TODO
     int num = 0;
     int i = 0;
+
+    //making itirations till the output is done
+    //leave if the char is not a number
 
     while (input[i] && (input[i] >= '0' && input[i] <= '9'))
     {
@@ -35,6 +51,8 @@ int convert(string input)
         i++;
     }
 
+    //returns the final number
     return num;
 
 }
+*/
