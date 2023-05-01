@@ -26,8 +26,8 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int num;
-    char tran;
+    int num = 0;
+    int tran;
     int i = 0;
 
     if (input[i] == '\0')
@@ -35,11 +35,10 @@ int convert(string input)
         return 0;
     }
 
-    for (int j = 0; )
-    tran = (char) input[i] - '0';
+    tran = (int) input[i] - 30;
 
-    num += num * 10 + (int) tran;
+    num += num * 10 + tran;
 
-    return
+    return num;
 
 }
