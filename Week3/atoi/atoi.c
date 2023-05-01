@@ -30,7 +30,7 @@ int convert(string input)
     int n = strlen (input);
     int i = n - 1;
 
-    if (input <= 0)
+    if (i == n)
     {
         return 0;
     }
