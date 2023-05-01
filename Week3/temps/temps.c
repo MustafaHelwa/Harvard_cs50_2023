@@ -64,7 +64,28 @@ void sort_cities(void)
 {
     // Add your code here
     // for sorting explaination, refer to https://www.programiz.com/dsa/bubble-sort
-    //since O(n^2) is required, I'll use bubble sort
+    // since O(n^2) is required, I'll use bubble sort
 
-    for ()
+    int size = NUM_CITIES;
+
+    for (int n = 0; n < size - 1; n++)
+    {
+        // bubble up each value to the top right
+
+        for (int i = 0; i < size - n - 1; i++)
+        {
+            if (temps[i].temp < temps[i + 1].temp)     //change it to > if you want ascending order. Also, change to .city to sort by city
+            {
+                string shiftingcity = temps[i].city;
+                int    shiftingtemp = temps[i].temp;
+
+                temps[i].city = temps[i+1].city;
+                temps[i+1].city = shiftingcity;
+
+                temps[i].temp = temps[i+1].temp;
+                temps[i+1].temp = shiftingtemp;
+
+            }
+        }
+    }
 }
