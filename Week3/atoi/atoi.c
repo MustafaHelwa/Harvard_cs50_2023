@@ -39,7 +39,7 @@ int convert(string input)
     }
     else if (n == 1)
     {
-        return input[n - 1] - '0';
+        return input[n - i] - '0';
     }
     else
     {
