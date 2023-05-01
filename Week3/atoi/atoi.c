@@ -27,16 +27,19 @@ int convert(string input)
 {
     // TODO
     int num;
+    char tran;
     int i = 0;
 
-    if (input[i] = '\0')
+    if (input[i] == '\0')
     {
         return 0;
     }
 
-    for (int n = strlen(input); n - 1 > i; i++)
-    {
-        
-    }
+    for (int j = 0; )
+    tran = (char) input[i] - '0';
+
+    num += num * 10 + (int) tran;
+
+    return
 
 }
