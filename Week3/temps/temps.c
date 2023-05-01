@@ -66,5 +66,5 @@ void sort_cities(void)
     // for sorting explaination, refer to https://www.programiz.com/dsa/bubble-sort
     //since O(n^2) is required, I'll use bubble sort
 
-    
+    for ()
 }
