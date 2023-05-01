@@ -49,8 +49,9 @@ int convert(string input)
             input[j] = '\0';
         }
     }
+    i++;
 
-    return (10 * convert (input) + input [i] - '0');
+    return (10 * convert (input) + input [len - 1] - '0');
 
 
 }
