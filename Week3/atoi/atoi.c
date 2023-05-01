@@ -26,6 +26,8 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    //starting with getting the length of this
+
+    if ()
+
 
 }
