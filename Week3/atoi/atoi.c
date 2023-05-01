@@ -26,18 +26,24 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int tran;
+    int num = 0;
     int n = strlen (input);
-    int i = n-1;
+    int i = n - 1;
 
     if (input <= 0)
     {
         return 0;
     }
 
-    convert ()
+    convert (input);
 
     num = num * 10 + (input[i] - '0');
+
+    for (int j = 0; j < n - i; j++)
+    {
+        input[j] = input[n - i];
+    }
+
     i++;
 
     return num;
