@@ -29,7 +29,6 @@ int convert(string input)
     int num;
     int i = 0;
     string trans;
-    char zero = 0;
 
     //break value if the input reached the last NULL value '\0'
     if (input[i] == '\0')
@@ -37,7 +36,7 @@ int convert(string input)
             return 0;
         }
 
-    trans = input[i] - zero;
+    trans = input[i] - '0';
 
     convert (trans);
 
