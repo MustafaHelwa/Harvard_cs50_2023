@@ -28,12 +28,26 @@ int convert(string input)
     // TODO
 
     int n = strlen(input);
-    int i = 1;
+    int i = 0;
 
     if (n > 1)
     {
 
-    return ((10 * convert (input)) + (input[n - i] - '0'));
+    for (int j = 0; j < n - 1; j++)
+    {
+        if (j < n - i)
+        {
+            input[j] = input[j];
+        }
+        else if (j == n - i)
+        {
+            input[j] = '\0';
+        }
+
+    }
+    i++;
+    
+    return ((10 * convert (input)) + (input[n - 1] - '0'));
 
     }
     else if (n == 1)
