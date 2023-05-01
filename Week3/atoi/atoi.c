@@ -29,20 +29,20 @@ int convert(string input)
     int i = 0;
     int n = strlen(input);
 
-    if (strlen(input) == 1)
-    {
-        return input[i] - '0';
-    }
-    else if (strlen(input) > 1)
-    {
-        i++;
 
-        input[n - 1] = '\0';
-
-        return ((10 * convert (input)) + (input[n - i - 1] - '0'));
+    if (n == 1)
+    {
+        return input[n - 1] - '0';
     }
 
-    return 0;
+    i++;
+
+    input[n - i] = '\0';
+
+    return ((10 * convert (input)) + (input[n - 1] - '0'));
+
+
+
 }
 
 
