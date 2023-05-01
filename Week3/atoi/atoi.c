@@ -38,6 +38,7 @@ int convert(string input)
     tran = (int) input[i] - 30;
 
     num += num * 10 + tran;
+    i++;
 
     return num;
 
