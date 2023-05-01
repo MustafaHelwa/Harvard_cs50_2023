@@ -26,26 +26,32 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int num = 0;
+    int len = strlen(input);
     int i = 0;
 
-    if (i == strlen(input))
+    //if input is only one digit
+    if (len == 1)
     {
-        return 0;
+        return input[i] - '0';
     }
 
-    convert (input);
+    //else
 
-    for (int j = 0; j < strlen(input) - i; j++)
+    for (int j = 0; j < len; j++)
     {
-        input[j] = input[j];
+        if (j < len)
+        {
+            input[j] = input[j];
+        }
+
+        if (j == len - 1)
+        {
+            input[j] = '\0';
+        }
     }
 
-    input [strlen(input) - i] = '\0';
+    return (10 * convert (input) + input [i] - '0');
 
-    i++;
-
-    return num * 10 + (input[i] - '0');
 
 }
 
