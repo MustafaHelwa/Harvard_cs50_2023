@@ -37,8 +37,11 @@ int convert(string input)
 
     tran = (int) input[i] - 30;
 
-    num += num * 10 + tran;
-    i++;
+    while (input[i] >= '0' && input[i] <= '9')
+    {
+        num = num * 10 + (input[i] - '0');
+        i++;
+    }
 
     return num;
 
