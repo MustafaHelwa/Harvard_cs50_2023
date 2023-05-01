@@ -28,24 +28,7 @@ int convert(string input)
     // TODO
     int num;
     int i = 0;
-    string trans;
 
-    //break value if the input reached the last NULL value '\0'
-    if (input[i] == '\0')
-        {
-            return 0;
-        }
-
-    convert (trans);
-
-    for (int j = 0; j < 2; j++)
-    {
-        trans[i] = 
-    }
-
-    i++;
-
-    return (num * 10) + (int)(trans - '0');
-
+    if (i = )
 
 }
