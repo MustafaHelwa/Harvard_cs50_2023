@@ -28,18 +28,17 @@ int convert(string input)
     // TODO
 
     int n = strlen(input);
-    int i = 0;
-    string input2[n - 1];
+    string dummyinput[n - 2];
 
     if (n > 1)
     {
 
-    for ( int j = 0; j < n - 2; j++)
+    for (int j = 0; j < n - 2; j++)
     {
-        input2[j] = input[j];
+        dummyinput[j] = input[j];
     }
 
-    return ((10 * convert (input2)) + (input[n - 1] - '0'));
+    return ((10 * convert (dummyinput)) + (input[n - 1] - '0'));
 
     }
     else if (n == 1)
