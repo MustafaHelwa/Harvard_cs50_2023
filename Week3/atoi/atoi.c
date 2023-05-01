@@ -34,7 +34,7 @@ int convert(string input)
     if (n > 1)
     {
 
-    for ( int j = 0; j < n - 1; j++)
+    for ( int j = 0; j < n - 2; j++)
     {
         input2[j] = input[j];
     }
