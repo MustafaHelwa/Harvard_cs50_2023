@@ -40,10 +40,9 @@ int convert(string input)
 
     convert (trans);
 
-    num = (num * 10) + (int) trans;
     i++;
 
-    return num;
+    return (num * 10) + (int) trans;
 
 
 }
