@@ -102,14 +102,14 @@ void print_winner(void)
         }
     }
 
-    printf("%s\n", candidates[candidate_count].name);
+    printf("%s %i \n", candidates[candidate_count].name, candidates[candidate_count].votes);
 
     for (int i = 1; i < candidate_count; i++)
     {
-        if (candidates[candidate_count].votes == candidates[candidate_count - i].votes)
-        {
-            printf("%s\n", candidates[candidate_count - i].name);
-        }
+        //if (candidates[candidate_count].votes == candidates[candidate_count - i].votes)
+
+            printf("%s %i \n", candidates[candidate_count - i].name, candidates[candidate_count - i].votes);
+
     }
 
 
