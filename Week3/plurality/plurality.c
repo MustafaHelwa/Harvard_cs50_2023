@@ -67,9 +67,17 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    //checking the whole candidates, from 0 to candidate count
+    //candidate count is argc - 1. Thus, we'll not deduct 1 again
+
     for (int i = 0; i < candidate_count; i++)
     {
-        if (name ==)
+        //looking for exact match in letters (no case sensitivity)
+
+        if (strcmp(name, candidate[i].name) == 0)
+        {
+            return true;                    //return 1;
+        }
     }
     return false;
 }
