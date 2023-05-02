@@ -13,8 +13,7 @@ sor5000 > 0.042
 sor10000 > 0.084
 sor50000 > 0.002
 
-How do you know?: TODO
-Reversed and random took long time, while Sorted didn't
+How do you know?: file Sorted didn't take time as much as the other large ones
 
 sort2 uses: Merge sort
 
@@ -30,11 +29,9 @@ sor5000 > 0.024
 sor10000 > 0.002
 sor50000 > 0.001
 
-How do you know?: TODO
-Similar time for all runs (nlongn)
+How do you know?: Similar time for all runs (nlongn)
 
 sort3 uses: Selection sort
-
 
 random5000 > 0.049
 r10000 > 0.170
