@@ -1,4 +1,6 @@
 sort1 uses: TODO
+linear sort
+
 random5000 > 0.094s
 r10000 > 0.323
 r50000 > 7.818
@@ -15,6 +17,8 @@ How do you know?: TODO
 Reversed and random took long time, while Sorted didn't
 
 sort2 uses: TODO
+bubble sort
+
 random5000 > 0.038s
 r10000 > 0.084
 r50000 > 0.878
@@ -23,13 +27,16 @@ rev5000 > 0.023
 rev10000 > 0.068
 rev50000 > 0.714
 
-sor5000 >
-sor10000 >
-sor50000 >
+sor5000 > 0.024
+sor10000 > 0.002
+sor50000 > 0.001
 
 How do you know?: TODO
+Again, sorted didn't take time at all  while random and reverse took similar time but less than linear
 
 sort3 uses: TODO
+Merge sort
+
 random5000 > 0.049
 r10000 > 0.170
 r50000 > 3.709
@@ -38,8 +45,9 @@ rev5000 > 0.072
 rev10000 > 0.184
 rev50000 > 3.713
 
-sor5000 >
-sor10000 >
-ror50000 >
+sor5000 > 0.069
+sor10000 > 0.156
+ror50000 >3.698
 
 How do you know?: TODO
+the 50k file took similar time in all cases
