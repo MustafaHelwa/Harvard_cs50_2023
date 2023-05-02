@@ -70,7 +70,7 @@ bool vote(string name)
     //checking the whole candidates, from 0 to candidate count
     //candidate count is argc - 1. Thus, we'll not deduct 1 again
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count - 1; i++)
     {
         //looking for exact match in letters (no case sensitivity)
 
@@ -87,7 +87,7 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count - 1; i++)
     {
         if (candidate[i].vote > candidate[i + 1].vote)
         {
