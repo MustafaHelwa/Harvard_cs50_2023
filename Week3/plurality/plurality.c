@@ -68,7 +68,7 @@ bool vote(string name)
 {
     // TODO
     //checking the whole candidates, from 0 to candidate count
-    //candidate count is argc - 1. Thus, we'll not deduct 1 again 
+    //candidate count is argc - 1. Thus, we'll not deduct 1 again
 
     for (int i = 0; i < candidate_count; i++)
     {
