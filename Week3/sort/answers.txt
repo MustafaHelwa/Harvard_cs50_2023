@@ -1,11 +1,20 @@
 sort1 uses: TODO
+random5000 > 0.094s
+r10000 > 0.323
+r50000 > 7.818
 
 How do you know?: TODO
 
 sort2 uses: TODO
+random5000 > 0.038s
+r10000 > 0.084
+r50000 > 0.878
+
 
 How do you know?: TODO
 
 sort3 uses: TODO
+random5000 > 0.049
+r10000 > 0.170
 
 How do you know?: TODO
