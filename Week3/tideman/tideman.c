@@ -102,14 +102,20 @@ bool vote(int rank, string name, int ranks[])
     // TODO
 
     //loop to check the name and put the rank from 0 to 2
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (strcmp(name, candidates[i]) == 0)
+    for (int i = 0; i < voter_count; i++)
         {
-            ranks[i] = rank;
-            return true;
-        }
-    }
+            // ranks[i] is voter's ith preference
+            int ranks[candidate_count];
+            // Query for each rank
+            for (int j = 0; j < candidate_count; j++)
+            {
+                string name = get_string("Rank %i: ", j + 1);
+                if (!vote(j, name, ranks))
+                {
+                    printf("Invalid vote.\n");
+                    return 3;
+                }
+            }
     return false;
 }
 
@@ -118,16 +124,22 @@ void record_preferences(int ranks[])
 {
     // TODO
     //loop over the whole preferences combinations, if the rank is higher, record a preference + 1
+// Update ranks given a new vote
+bool vote(int rank, string name, int ranks[])
+{
+    // Loop through candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
+        // Check name is valid
+        if (strcmp(candidates[i], name) == 0)
         {
-            if(ranks[i] < ranks[j])
-            {
-                preferences[i][j] += 1;
-            }
+            // Update ranks array with rank preference
+            ranks[rank] = i;
+            return true;
         }
     }
+    return false;
+}
     return;
 }
 
@@ -135,7 +147,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-    
+
 
     return;
 }
