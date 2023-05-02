@@ -89,7 +89,20 @@ void print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (candidates[j].votes < candidates[j + 1].votes)
+            {
+                string dummy_name = candidates[j].name;
+                int    dummy_votes = candidates[j].votes;
 
+                candidates[j].name = candidates[j + 1].name;
+                candidates[j].votes = candidates[j + 1].votes;
+
+                candidates[j + 1].name = dummy_name;
+                candidates[j + 1].votes = dummy_votes;
+            }
+        }
     }
 
     // print all values equal to the highest
