@@ -104,7 +104,10 @@ bool vote(int rank, string name, int ranks[])
     //loop to check the name and put the rank from 0 to 2
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(name, ) )
+        if (strcmp(name, candidates[i]) == 0)
+        {
+            ranks[] = 
+        }
     }
     return false;
 }
