@@ -89,26 +89,26 @@ void print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > candidates[i + 1].votes)
+        if (candidates[candidate_count].votes < candidates[candidate_count - 1 - i].votes)
         {
-            string dummy_string = candidates[i].name;
-            int dummy_int = candidates[i].votes;
+            string dummy_string = candidates[candidate_count].name;
+            int dummy_int = candidates[candidate_count].votes;
 
-            candidates[i].name = candidates[i + 1].name;
-            candidates[i].votes = candidates[i + 1].votes;
+            candidates[candidate_count].name = candidates[candidate_count - 1 - i].name;
+            candidates[candidate_count].votes = candidates[candidate_count - 1 - i].votes;
 
-            candidates[i + 1].name = dummy_string;
-            candidates[i + 1].votes = dummy_int;
+            candidates[candidate_count - 1 - i].name = dummy_string;
+            candidates[candidate_count - 1 - i].votes = dummy_int;
         }
     }
 
-    printf("%s %i \n", candidates[candidate_count].name, candidates[candidate_count].votes);
+    printf("%s %i \n", candidates[0].name, candidates[0].votes);
 
     for (int i = 1; i < candidate_count; i++)
     {
         //if (candidates[candidate_count].votes == candidates[candidate_count - i].votes)
 
-            printf("%s %i \n", candidates[candidate_count - i].name, candidates[candidate_count - i].votes);
+            printf("%s %i \n", candidates[i].name, candidates[i].votes);
 
     }
 
