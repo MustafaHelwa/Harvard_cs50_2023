@@ -99,7 +99,6 @@ void print_winner(void)
 
             candidates[i + 1].name = dummy_string;
             candidates[i + 1].votes = dummy_int;
-
         }
     }
 
