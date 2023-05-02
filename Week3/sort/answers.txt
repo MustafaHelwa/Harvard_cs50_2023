@@ -1,4 +1,4 @@
-sort1 uses: linear sort
+sort1 uses: Selection sort
 
 
 random5000 > 0.094s
@@ -17,7 +17,6 @@ How do you know?: TODO
 Reversed and random took long time, while Sorted didn't
 
 sort2 uses: bubble sort
-
 
 random5000 > 0.038s
 r10000 > 0.084
