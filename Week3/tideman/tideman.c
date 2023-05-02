@@ -100,6 +100,9 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
+
+    //loop to check the name and put the rank from 0 to 2
+    for (int i = 0; i < )
     return false;
 }
 
