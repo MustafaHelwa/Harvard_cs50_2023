@@ -89,25 +89,16 @@ void print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[candidate_count].votes < candidates[candidate_count - 1 - i].votes)
-        {
-            string dummy_string = candidates[candidate_count].name;
-            int dummy_int = candidates[candidate_count].votes;
 
-            candidates[candidate_count].name = candidates[candidate_count - 1 - i].name;
-            candidates[candidate_count].votes = candidates[candidate_count - 1 - i].votes;
-
-            candidates[candidate_count - 1 - i].name = dummy_string;
-            candidates[candidate_count - 1 - i].votes = dummy_int;
-        }
     }
 
-    printf("%s %i \n", candidates[0].name, candidates[0].votes);
+    // print all values equal to the highest
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[candidate_count].votes == candidates[i].votes)
+        if (candidates[0].votes == candidates[i].votes)
         {
+
             printf("%s %i \n", candidates[i].name, candidates[i].votes);
         }
     }
