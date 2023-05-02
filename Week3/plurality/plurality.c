@@ -76,7 +76,7 @@ bool vote(string name)
 
         if (strcmp(name, candidates[i].name) == 0)
         {
-            candidates[i].votes++;            //add one to the vote counter for the same candidate
+            candidates[i].votes += 1;            //add one to the vote counter for the same candidate
             return true;                    //return 1;
         }
     }
