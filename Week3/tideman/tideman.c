@@ -132,7 +132,7 @@ void record_preferences(int ranks[])
             preferences[ranks[i]][ranks[j]]++;
         }
     }
-return;
+    return;
 }
 
 // Record pairs of candidates where one is preferred over the other
@@ -188,7 +188,7 @@ void lock_pairs(void)
     // Loop through pairs
     for (int i = 0; i < pair_count; i++)
     {
-    // If cycle function returns false, lock the pair
+        // If cycle function returns false, lock the pair
         if (!cycle(pairs[i].loser, pairs[i].winner))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
@@ -245,19 +245,16 @@ void print_winner(void)
 
 
 /*
-Note:
 
+Note:
 I struggled solving the following check50 message:
 
-"
-:( lock_pairs skips final pair if it creates cycle
-    lock_pairs did not correctly lock all non-cyclical pairs
-"
+    ":( lock_pairs skips final pair if it creates cycle
+        lock_pairs did not correctly lock all non-cyclical pairs"
 
-While searching for solution, I found a solution from the link below using another function to return 
-
+While searching for solution, I found a solution from the *link below* using another function to stop cycle creation.
+This, many thanks for the tutorial
 
 https://joseph28robinson.medium.com/cs50-pset3-tideman-87f22f0f0bc3
-
 
 */
