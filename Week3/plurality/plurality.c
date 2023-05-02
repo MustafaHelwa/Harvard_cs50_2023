@@ -68,9 +68,9 @@ bool vote(string name)
 {
     // TODO
     //checking the whole candidates, from 0 to candidate count
-    //candidate count is argc - 1. Thus, we'll not deduct 1 again and we'll add equal sign
+    //candidate count is argc - 1. Thus, we'll not deduct 1 again 
 
-    for (int i = 0; i <= candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         //looking for exact match in letters (no case sensitivity)
 
