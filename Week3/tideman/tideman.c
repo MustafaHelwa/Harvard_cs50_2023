@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
+
 // Max number of candidates
 #define MAX 9
 
@@ -177,8 +178,7 @@ void sort_pairs(void)
             }
         }
     }
-return;
-}
+
     return;
 }
 
@@ -186,6 +186,16 @@ return;
 void lock_pairs(void)
 {
     // TODO
+    // Loop through pairs
+    for (int i = 0; i < pair_count; i++)
+    {
+    // If cycle function returns false, lock the pair
+        if (!cycle(pairs[i].loser, pairs[i].winner))
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
+    }
+
     return;
 }
 
@@ -193,5 +203,22 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
+    // Winner is the candidate with no arrows pointing to them
+    for (int i = 0; i < candidate_count; i++)
+    {
+        int false_count = 0;
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (locked[j][i] == false)
+            {
+                false_count++;
+                if (false_count == candidate_count)
+                {
+                    printf("%s\n", candidates[i]);
+                }
+            }
+        }
+    }
+
     return;
 }
