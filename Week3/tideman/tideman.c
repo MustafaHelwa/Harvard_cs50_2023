@@ -33,7 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-bool cycle(int end, int cycle_start);
+bool cycle(int end, int cycle_start);   //check note at the end
 
 int main(int argc, string argv[])
 {
@@ -242,3 +242,22 @@ void print_winner(void)
 
     return;
 }
+
+
+/*
+Note:
+
+I struggled solving the following check50 message:
+
+"
+:( lock_pairs skips final pair if it creates cycle
+    lock_pairs did not correctly lock all non-cyclical pairs
+"
+
+While searching for solution, I found that
+
+
+https://joseph28robinson.medium.com/cs50-pset3-tideman-87f22f0f0bc3
+
+
+*/
