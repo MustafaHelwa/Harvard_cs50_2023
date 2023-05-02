@@ -105,15 +105,12 @@ void print_winner(void)
 
     printf("%s\n", candidates[candidate_count].name);
 
-    if (candidates[candidate_count].votes == candidates[candidate_count - 1].votes)
+    for (int i = 1; i < candidate_count; i++)
     {
-       for (int i = 0; i < candidate_count; i++)
-       {
         if (candidates[candidate_count].votes == candidates[candidate_count - i].votes)
         {
             printf("%s\n", candidates[candidate_count - i].name);
         }
-       }
     }
 
 
