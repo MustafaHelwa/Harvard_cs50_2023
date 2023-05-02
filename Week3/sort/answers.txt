@@ -3,13 +3,29 @@ random5000 > 0.094s
 r10000 > 0.323
 r50000 > 7.818
 
+rev5000 > 0.071
+rev10000 > 0.301
+rev50000 > 5.847
+
+sor5000 > 0.042
+sor10000 > 0.084
+sor50000 > 0.002
+
 How do you know?: TODO
+Reversed and random took long time, while Sorted didn't
 
 sort2 uses: TODO
 random5000 > 0.038s
 r10000 > 0.084
 r50000 > 0.878
 
+rev5000 > 0.023
+rev10000 > 0.068
+rev50000 > 0.714
+
+sor5000 >
+sor10000 >
+sor50000 >
 
 How do you know?: TODO
 
@@ -17,6 +33,13 @@ sort3 uses: TODO
 random5000 > 0.049
 r10000 > 0.170
 r50000 > 3.709
-rev 
+
+rev5000 > 0.072
+rev10000 > 0.184
+rev50000 > 3.713
+
+sor5000 >
+sor10000 >
+ror50000 >
 
 How do you know?: TODO
