@@ -89,7 +89,7 @@ void print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        if (candidates[i].votes > candidates[i + 1].votes)
+        if (candidates[i].votes < candidates[i + 1].votes)
         {
             string dummy_string = candidates[i].name;
             int dummy_int = candidates[i].votes;
