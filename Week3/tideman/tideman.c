@@ -253,7 +253,7 @@ I struggled solving the following check50 message:
         lock_pairs did not correctly lock all non-cyclical pairs"
 
 While searching for solution, I found a solution from the *link below* using another function to stop cycle creation.
-This, many thanks for the tutorial
+Thus, many thanks for the tutorial
 
 https://joseph28robinson.medium.com/cs50-pset3-tideman-87f22f0f0bc3
 
