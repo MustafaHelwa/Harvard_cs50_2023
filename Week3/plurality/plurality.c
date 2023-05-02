@@ -103,20 +103,20 @@ void print_winner(void)
         }
     }
 
-    if (candidates[candidate_count].votes == candidates[candidate_count - 1].votes)
+    if (candidates[0].votes == candidates[1].votes)
     {
-        if (candidates[candidate_count - 1].votes == candidates[candidate_count - 2].votes)
+        if (candidates[1].votes == candidates[2].votes)
         {
-            printf("%i \n%i \n%i", candidates[candidate_count].votes, candidates[candidate_count - 1].votes,  candidates[candidate_count - 2].votes);
+            printf("%s \n%s \n%s", candidates[0].name, candidates[1].name,  candidates[2].name);
         }
         else
         {
-            printf("%i\n %i", candidates[candidate_count].votes, candidates[candidate_count - 1].votes);
+            printf("%s\n %s", candidates[0].name, candidates[1].name);
         }
     }
     else
     {
-        printf("%i\n", candidates[candidate_count].votes);
+        printf("%s\n", candidates[0].name);
     }
 
 
