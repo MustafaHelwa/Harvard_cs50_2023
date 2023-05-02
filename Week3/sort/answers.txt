@@ -16,7 +16,7 @@ sor50000 > 0.002
 How do you know?: TODO
 Reversed and random took long time, while Sorted didn't
 
-sort2 uses: Merge sort
+sort2 uses: Bubble sort
 
 random5000 > 0.038s
 r10000 > 0.084
@@ -33,7 +33,7 @@ sor50000 > 0.001
 How do you know?: TODO
 Again, sorted didn't take time at all  while random and reverse took similar time but less than linear
 
-sort3 uses: Bubble sort
+sort3 uses: Merge sort
 
 
 random5000 > 0.049
