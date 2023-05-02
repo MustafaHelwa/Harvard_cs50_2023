@@ -1,4 +1,4 @@
-sort1 uses: Selection sort
+sort1 uses: Bubble sort
 
 
 random5000 > 0.094s
@@ -33,7 +33,7 @@ sor50000 > 0.001
 How do you know?: TODO
 Similar time for all runs (nlongn)
 
-sort3 uses: Bubble sort
+sort3 uses: Selection sort
 
 
 random5000 > 0.049
@@ -46,7 +46,7 @@ rev50000 > 3.713
 
 sor5000 > 0.069
 sor10000 > 0.156
-ror50000 >3.698
+sor50000 >3.698
 
 How do you know?: the 50k file took similar time in all cases
 
