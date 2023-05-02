@@ -74,9 +74,9 @@ bool vote(string name)
     {
         //looking for exact match in letters (no case sensitivity)
 
-        if (strcmp(name, candidate[i].name) == 0)
+        if (strcmp(name, candidates[i].name) == 0)
         {
-            candidate[i].vote++;            //add one to the vote counter for the same candidate
+            candidates[i].votes++;            //add one to the vote counter for the same candidate
             return true;                    //return 1;
         }
     }
@@ -89,34 +89,34 @@ void print_winner(void)
     // TODO
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        if (candidate[i].vote > candidate[i + 1].vote)
+        if (candidates[i].votes > candidates[i + 1].votes)
         {
-            string dummy_string = candidate[i].name;
-            int dummy_int = candidate[i].vote;
+            string dummy_string = candidates[i].name;
+            int dummy_int = candidates[i].votes;
 
-            candidate[i].name = candidate[i + 1].name;
-            candidate[i].vote = candidate[i + 1].vote;
+            candidates[i].name = candidates[i + 1].name;
+            candidates[i].votes = candidates[i + 1].votes;
 
-            candidate[i + 1].name = dummy_string;
-            candidate[i + 1].vote = dummy_vote;
+            candidates[i + 1].name = dummy_string;
+            candidates[i + 1].votes = dummy_int;
 
         }
     }
 
-    if (candidate[candidate_count].vote == candidate[candidate_count - 1].vote)
+    if (candidates[candidate_count].votes == candidates[candidate_count - 1].votes)
     {
-        if (candidate[candidate_count - 1].vote == candidate[candidate_count - 2].vote)
+        if (candidates[candidate_count - 1].votes == candidates[candidate_count - 2].votes)
         {
-            printf("%i \n%i \n%i", candidate[candidate_count].vote, candidate[candidate_count - 1].vote,  candidate[candidate_count - 2].vote);
+            printf("%i \n%i \n%i", candidates[candidate_count].votes, candidates[candidate_count - 1].votes,  candidates[candidate_count - 2].votes);
         }
         else
         {
-            printf("%i\n %i", candidate[candidate_count].vote, candidate[candidate_count - 1].vote);
+            printf("%i\n %i", candidates[candidate_count].votes, candidates[candidate_count - 1].votes);
         }
     }
     else
     {
-        printf("%i\n", candidate[candidate_count].vote);
+        printf("%i\n", candidates[candidate_count].votes);
     }
 
 
