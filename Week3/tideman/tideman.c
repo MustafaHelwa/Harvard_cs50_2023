@@ -33,6 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+bool cycle(int end, int cycle_start);
 
 int main(int argc, string argv[])
 {
@@ -195,6 +196,27 @@ void lock_pairs(void)
     }
 
     return;
+}
+
+bool cycle(int end, int cycle_start)
+{
+    // Return true if there is a cycle created (Recursion base case)
+    if (end == cycle_start)
+    {
+        return true;
+    }
+    // Loop through candidates (Recursive case)
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (locked[end][i])
+        {
+            if (cycle(i, cycle_start))
+            {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 // Print the winner of the election
