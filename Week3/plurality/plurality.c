@@ -76,7 +76,7 @@ bool vote(string name)
 
         if (strcmp(name, candidate[i].name) == 0)
         {
-            candidate[i].vote++; 
+            candidate[i].vote++;            //add one to the vote counter for the same candidate
             return true;                    //return 1;
         }
     }
@@ -87,5 +87,38 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidate[i].vote > candidate[i + 1].vote)
+        {
+            string dummy_string = candidate[i].name;
+            int dummy_int = candidate[i].vote;
+
+            candidate[i].name = candidate[i + 1].name;
+            candidate[i].vote = candidate[i + 1].vote;
+
+            candidate[i + 1].name = dummy_string;
+            candidate[i + 1].vote = dummy_vote;
+
+        }
+    }
+
+    if (candidate[candidate_count].vote == candidate[candidate_count - 1].vote)
+    {
+        if (candidate[candidate_count - 1].vote == candidate[candidate_count - 2].vote)
+        {
+            printf("%i \n%i \n%i", candidate[candidate_count].vote, candidate[candidate_count - 1].vote,  candidate[candidate_count - 2].vote);
+        }
+        else
+        {
+            printf("%i\n %i", candidate[candidate_count].vote, candidate[candidate_count - 1].vote);
+        }
+    }
+    else
+    {
+        printf("%i\n", candidate[candidate_count].vote);
+    }
+
+
     return;
 }
