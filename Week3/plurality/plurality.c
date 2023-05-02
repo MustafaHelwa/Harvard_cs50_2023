@@ -107,11 +107,11 @@ void print_winner(void)
     {
         if (candidates[candidate_count - 1].votes == candidates[candidate_count - 2].votes)
         {
-            printf("%s \n%s \n%s", candidates[candidate_count].name, candidates[candidate_count - 1].name,  candidates[candidate_count - 2].name);
+            printf("%s \n%s \n%s \n", candidates[candidate_count].name, candidates[candidate_count - 1].name,  candidates[candidate_count - 2].name);
         }
         else
         {
-            printf("%s\n %s", candidates[candidate_count].name, candidates[candidate_count - 1].name);
+            printf("%s\n %s\n", candidates[candidate_count].name, candidates[candidate_count - 1].name);
         }
     }
     else
