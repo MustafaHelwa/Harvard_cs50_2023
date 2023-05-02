@@ -1,5 +1,5 @@
-sort1 uses: TODO
-linear sort
+sort1 uses: linear sort
+
 
 random5000 > 0.094s
 r10000 > 0.323
@@ -16,8 +16,8 @@ sor50000 > 0.002
 How do you know?: TODO
 Reversed and random took long time, while Sorted didn't
 
-sort2 uses: TODO
-bubble sort
+sort2 uses: bubble sort
+
 
 random5000 > 0.038s
 r10000 > 0.084
@@ -34,8 +34,8 @@ sor50000 > 0.001
 How do you know?: TODO
 Again, sorted didn't take time at all  while random and reverse took similar time but less than linear
 
-sort3 uses: TODO
-Merge sort
+sort3 uses: Merge sort
+
 
 random5000 > 0.049
 r10000 > 0.170
@@ -49,5 +49,5 @@ sor5000 > 0.069
 sor10000 > 0.156
 ror50000 >3.698
 
-How do you know?: TODO
-the 50k file took similar time in all cases
+How do you know?: the 50k file took similar time in all cases
+
