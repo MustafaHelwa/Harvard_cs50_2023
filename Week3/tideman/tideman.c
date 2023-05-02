@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-
+#include <string.h>
 
 // Max number of candidates
 #define MAX 9
@@ -159,8 +159,6 @@ void add_pairs(void)
     return;
 }
 
-    return;
-}
 
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
